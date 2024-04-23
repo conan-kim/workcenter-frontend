@@ -1,0 +1,315 @@
+.contents-wrap {
+  &.myinfo {
+    background-color: $bgColor-12;
+    .box-layer {
+      box-shadow: none;
+      .title1 {
+        letter-spacing: normal;
+      }
+      .button-wrap {
+        padding-top: 0;
+      }
+    }
+  }
+}
+.modify-box {
+  .myinfo-box {
+    margin-top: 60px;
+    // padding-bottom: 32px;
+    .modify-tit {
+      padding-bottom: 16px;
+      font-size: 20px;
+      font-weight: bold;
+      letter-spacing: -0.5px;
+      border-bottom: 2px solid #222;
+    }
+    .info-block {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      border-bottom: 1px solid #eee;
+      padding: 32px 0;
+      .info-title {
+        width: 160px;
+        text-align: left;
+        font-weight: bold;
+        text-align: left;
+        .title {
+          display: flex;
+          flex-direction: row;
+        }
+      }
+      .info-cont {
+        min-width: 160px;
+        width: calc(100% - 160px);
+        padding: 0 200px 0 160px;
+        &.block {
+          padding: 0 0 0 160px;
+        }
+        &.between {
+          display: flex;
+          justify-content: space-between;
+          padding: 0 0 0 160px;
+        }
+        .complete-tit {
+          color: $color-6;
+        }
+
+        &.btn-box {
+          display: flex;
+          align-items: center;
+          gap: 24px;
+
+          .button {
+            width: auto;
+            padding: 19px 24px 18px;
+          }
+        }
+      }
+    }
+
+  }
+  .field-form {
+    margin-top: auto;
+  }
+  .button-wrap {
+    padding-top: 60px;
+    .button {
+      width: 240px;
+    }
+    .button + .button {
+      margin-left: 20px;
+    }
+  }
+  .rulebox {
+    display: flex;
+    justify-content: space-between;
+    .selectbox {
+      .arrow {
+        right: auto;
+      }
+      .textpoint {
+        &.select {
+          font-weight: bold;
+          color: $color-4;
+        }
+      }
+      .checkbox-title {
+        font-weight: bold;
+        text-align: left;
+      }
+    }
+    .subcheckbox {
+      margin-left: auto;
+      .ruletext:nth-of-type(1) {
+        margin-right: 40px;
+      }
+      .ruletext {
+        .checkbox-title {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+  .withdrawal-box {
+    margin-top: 100px;
+    background-color: #f9f9f9;
+    padding: 24px 32px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .withdrawal-text {
+      line-height: 2;
+      color: #666;
+    }
+    .withdrawal-btn {
+      font-size: 14px;
+      letter-spacing: -0.35px;
+      padding: 16px 24px;
+      border-radius: 8px;
+      border: solid 1px #ddd;
+      background-color: #fff;
+    }
+  }
+
+  /* 나의 플루니안 */
+  .my-flunian-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .flunian-content {
+      .title {
+        color: #222;
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 24px;
+      }
+      .flunian-info-wrap {
+        display: flex;
+        gap: 16px;
+
+        .character {
+          flex: 1 0 80px;
+          height: 80px;
+        }
+
+        .flunian-info {
+          color: #222;
+          font-size: 16px;
+          line-height: 1.5;
+
+          .info-hour {
+            strong {
+              font-weight: bold;
+
+              &.f-color-brown {
+                color: #83604b;
+              }
+            }
+          }
+
+          .info-tel {
+            color: #ed7c1b;
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 12px;
+
+          }
+
+          .info-more {
+            color: #666;
+            margin-top: 12px;
+
+            span {
+              margin-right: 5px;
+            }
+
+            .link-text {
+              color: #ed7c1b;
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+
+    .my-flunian-link {
+      .checkbutton {
+        width: 80px;
+        height: 40px;
+        border: 1px solid #ddd;
+      }
+
+    }
+  }
+}
+
+.myinfo-box {
+  &.title-align {
+    .info-block:not(.exception,.pt-none) {
+      align-items: center;
+    }
+    .info-block {
+      &.exception {
+        .info-title {
+          padding-top: 18px;
+        }
+      }
+    }
+  }
+}
+
+.sns-toggle {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  &:not(:last-of-type) {
+    margin-bottom: 16px;
+  }
+  img {
+    width: 26px;
+    height: 27px;
+    margin-right: 10px;
+  }
+  .state-message {
+    margin-left: auto;
+    padding-right: 32px;
+    font-size: 14px;
+    letter-spacing: -0.35px;
+    color: $color-4;
+    display: none;
+  }
+  &.active {
+    .state-message {
+      display: block;
+    }
+  }
+}
+
+.mypage-title-box {
+  .explanation {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    .txt {
+      letter-spacing: -0.4px;
+      color: $color-4;
+    }
+  }
+}
+
+.utcheck {
+  line-height: 0;
+  label {
+    display: inline-flex;
+    align-items: center;
+  }
+  [type=checkbox] {
+    appearance: none;
+    position: relative;
+    background-color: $bdColor-3;
+    border-radius: 16px;
+    width: 56px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 4px;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background-color: $bgColor-12;
+      transition: left 250ms linear;
+    }
+  }
+  [type=checkbox]:checked {
+    background-color: $bgColor-7;
+    border-color: $bgColor-7;
+    &::before {
+      background-color: $bgColor-12;
+      left: 28px;
+    }
+  }
+  [type=checkbox]:disabled {
+    border-color: $bdColor-3;
+    opacity: 0.7;
+    cursor: not-allowed;
+    &::before {
+      background-color: $bgColor-11;
+    }
+  }
+  [type=checkbox]:disabled + span {
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
+}
+
+
+
+
+

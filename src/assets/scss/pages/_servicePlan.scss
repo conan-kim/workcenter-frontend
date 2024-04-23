@@ -1,0 +1,192 @@
+.service-plan{
+  .tab-payment-type{
+    display: flex;
+    width: 300px;
+    margin: 0 auto;
+    background-color: #f5f2f1;
+    border-radius: 40px;
+    overflow: hidden;
+    .tab-item{
+      flex: 0 0 50%;
+      display: inline-flex;
+      font-size: 20px;
+      color: #222222;
+      justify-content: center;
+      align-items: center;
+      height: 72px;
+      border-radius: 40px;
+      transition: all 0.1s;
+      &.on{
+        background-color: #83604b;
+        color: #ffffff;
+        font-weight: 700;
+      }
+    }
+  }
+  .sub-text{
+    font-size: 16px;
+    color: #666666;
+    margin-top: 16px;
+    &.align-c{
+      text-align: center;
+    }
+  }
+
+  // 요금제
+  .payment-list{
+    margin-top: 60px;
+    .grid{
+      display: grid;
+      gap: 40px;
+      &.col-4{
+        grid-template-columns: repeat(4, minmax(270px, 1fr));
+      }
+      &.col-3{
+        grid-template-columns: repeat(3, minmax(373px, 1fr));
+      }
+      grid-template-rows: 313px 234px;
+      .payment-item{
+        position: relative;
+        padding: 40px 32px 32px;
+        border-radius: 20px;
+        box-shadow: 0 0 32px 0 rgba(0, 0, 0, 0.12);
+        background-color: #fff;
+        transition: all 0.2s;
+        &.wide{
+          grid-column: 1 / -1;
+        }
+        &:hover{
+          background-color: #ed7c1b;
+          transform: translateY(-20px);
+          *,.credit, .pay-amount, .pay-name{
+            color: #ffffff !important;
+          }
+          .bd-brown, .button{
+            background-color: #ed7c1b;
+            color: #ffffff;
+            border: 1px solid #ffffff;
+            
+          }
+          
+          
+        }
+        .pay-name{
+          font-size: 24px;
+          font-weight: 700;
+          letter-spacing: -0.6px;
+        }
+        .pay-amount{
+          margin-top: 24px;
+          font-size: 20px;
+          font-weight: 700;
+          color: #ed7c1b;
+          .unit{
+            font-size: 16px;
+          }
+        }
+        .credit{
+          margin-top: 12px;
+          font-size: 32px;
+          font-weight: 700;
+          color: #222222;
+        }
+        .text{
+          margin-top: 8px;
+          font-size: 16px;
+          font-size: #666666;
+        }
+        .btn-wrap{
+          position: absolute;
+          bottom: 32px;
+          left: 32px;
+          width: calc(100% - 64px);
+          .button{
+            font-size: 16px;
+            padding: 18px 0;
+            transition: all .2s;
+          }
+        }
+        &.enterprise{
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 0 60px;
+          &:hover{
+            transform: translateY(0);
+          }
+          .pay-name{
+            color: #ed7c1b; 
+          }
+          .catch-phrase{
+            color: #222222;
+            font-size: 32px;
+            font-weight: 700;
+            margin-top: 12px;
+          }
+          .description-plan{
+            font-size: 16px;
+            color: #666666;
+            margin-top: 20px;
+          }
+          .button{
+            width: 160px;
+            height: 56px;
+            background-color: #ed7c1b;
+            color: #ffffff;
+          }
+        }
+      }
+    }
+  }
+  // 플랜상세비교
+  .plan-compare{
+    margin-top: 120px;
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 0 32px 0 rgba(0, 0, 0, 0.12);
+    overflow: hidden;
+    thead{
+      background-color: #eeeeee;
+      th{
+        font-size: 20px;
+        font-weight: 700;
+        color: #222222;
+        height: 104px;
+      }
+    }
+    th, td{
+      vertical-align: middle;
+      text-align: center;
+      &:nth-of-type(1){
+        text-align: left;
+        padding-left: 60px;
+      }
+      &:nth-last-of-type(1){
+        padding-right: 60px;
+      }
+    }
+    th{
+      &:nth-of-type(1){
+        font-size: 24px;
+      }
+    }
+    td{
+      font-size: 16px;
+      height: 80px;
+      border-bottom: 1px solid #eeeeee;
+      &:nth-of-type(1){
+        color: #666666;
+      }
+      color: #222222;
+    }
+    tr:nth-last-of-type(1){
+      .td{
+        border-bottom: 0;
+      }
+    }
+    .fc-brown{
+      color: $color-7;
+    }
+  }
+}

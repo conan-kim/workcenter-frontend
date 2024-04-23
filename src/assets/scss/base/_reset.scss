@@ -1,0 +1,225 @@
+@charset "utf-8";
+
+/*
+Copyright (c) 2021 Kil Hyung-jin, with Reserved Font Name Pretendard.
+https://github.com/orioncactus/pretendard
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1.
+This license is copied below, and is also available with a FAQ at:
+http://scripts.sil.org/OFL
+*/
+
+/// reset PC
+
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+strong,
+em,
+img,
+sub,
+sup,
+address,
+cite,
+pre,
+code,
+del,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+menu,
+nav,
+output,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  line-height: 24px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+html{
+  scroll-behavior: smooth;
+}
+article,
+aside,
+figcaption,
+figure,
+footer,
+header,
+nav,
+section {
+  display: block;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  overflow: visible;
+  appearance: button;
+  cursor: pointer;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+input[data-type="number"] {
+  ime-mode: disabled;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+input[type="search"] {
+  appearance: textfield;
+  box-sizing: content-box;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  appearance: none;
+}
+
+input::-ms-clear,
+input::-ms-reveal {
+  display: none;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+[disabled] {
+  cursor: default;
+}
+
+html {
+  overflow-y: scroll;
+  font-size: 62.5%;
+}
+
+body {
+  width: 100%;
+  font-family: Pretendard;
+  letter-spacing: -.4px;
+  word-break: break-all;
+  background-color: #fff;
+  display: flex;
+  flex-flow: column;
+  min-height: 100vh;
+  color: #222;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+input,
+button,
+select,
+textarea {
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 16px;
+  font-family: inherit;
+  color: inherit;
+  box-sizing: border-box;
+  appearance: none;
+  vertical-align: middle;
+  border-radius: 0;
+  background-color: transparent;
+  outline: none;
+}
+
+caption,
+legend,
+hr {
+  display: none;
+}
+
+em,
+address,
+i {
+  font-style: normal;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+strong,
+b,
+em {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+label {
+  cursor: pointer;
+}

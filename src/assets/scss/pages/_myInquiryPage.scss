@@ -1,0 +1,66 @@
+.inquiry-title-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .title {
+    color: $color-9;
+    @include fontCustom(32px,700,null,null);
+  }
+
+  .inqu-title-text {
+    color: $color-4;
+    @include fontCustom(16px,400,24px,-0.4px);
+  }
+}
+
+.modify-box {
+  &.inquiry-page {
+    margin-top: 28px;
+    border-top: 2px solid $bdColor-6;
+    .myinfo-box {
+      margin-top: 0;
+    }
+
+    .info-block {
+      .info-cont {
+        overflow: inherit;
+      }
+
+      .subcheckbox {
+        padding: 0;
+        gap: 40px;
+      }
+    }
+
+    .field-form {
+      .cont-line {
+        &.line {
+          align-items: center;
+          gap: 12px;
+        }
+      }
+    }
+
+    .file-button-wrap {
+      position: relative;
+      flex-basis: 120px;
+      flex-shrink: 0;
+
+      .checkbutton {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        padding: 15px 0;
+      }
+
+      .button-file {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+      }
+    }
+  }
+}

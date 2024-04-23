@@ -1,0 +1,584 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<title>LG EP 프로젝트 PC coding guide</title>
+	<link rel="stylesheet" href="../../../css/fonts.css" type="text/css"/>
+	<link rel="stylesheet" href="../../../css/reset.css" type="text/css"/>
+	<link rel="stylesheet" href="../../../css/pc/em/layout.css" type="text/css"/>
+	<link rel="stylesheet" href="../../../css/pc/em/com_em.css" type="text/css"/>
+	<link rel="stylesheet" href="../../../css/pc/em/form.css" type="text/css"/>
+	<!-- js -->
+	<script type="text/javascript" src="../../../js/lib/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="../../../js/pc/com_em.js"></script>
+	<!-- Plug in 가이드 -->
+    <link rel="stylesheet" href="../../docs/guide.css">
+    <link rel="stylesheet" href="../../docs/prism.css">
+    <script type="text/javascript" src="../../docs/prism.js"></script>
+	<!-- plugins -->
+	<link rel="stylesheet" href="../../../js/plugins/mCustomScrollbar/jquery.mCustomScrollbar.css">
+	<script src="../../../js/plugins/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+</head>
+<body>
+<div class="wrap">
+	<div class="guide_header"><em>LG EP</em> 프로젝트 PC coding guide
+		<h1><img src="../../images/logo.png" alt="로고"></h1>
+	</div>
+
+	<div class="cont_codGuide guide_container">
+		<div class="coding_type">
+			<div>
+				<a href="../../mobile/index_mo.html" title="mobile" class="btn_type">Mobile</a>
+				<a href="../../list_page.html" title="coding list">LIST PAGE</a>
+			</div>
+		</div>
+
+		<div class="tab">
+			<a href="coding_guide_layout.html" title="BOX">Layout</a>
+			<a href="coding_guide_box.html" title="BOX">Box</a>
+			<a href="coding_guide_button.html" title="BUTTON">Button</a>
+			<a href="coding_guide_form.html" title="FORM">Form</a>
+			<a href="coding_guide_font.html" title="FONT">Font</a>
+			<a href="coding_guide_color.html" title="COLOR">Color</a>
+			<a href="coding_guide_table.html" title="TABLE">Table</a>
+			<a href="javascript:void(0)" title="TOOLTIP" class="active">Tooltip</a>
+		</div>
+
+		<div class="contents_infor">
+			<h2 class="title mt30">툴팁 (Hover)</h2>
+			<div class="conIn_tip"></div>
+			<ul style="display:flex;text-align:center;justify-content:center;">
+				<li style="width:100%;">
+					<div class="tooltip hover">툴팁(호버 / 위쪽 방향 / 블루)
+						<div class="tooltip_pop bottom">
+							<div class="cont">
+								<p>
+									버튼을 클릭하면 전체 접수 정보를 확인 하실 수 있습니다.
+								</p>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li style="width:100%;">
+					<div class="tooltip hover">툴팁(호버 / 아래쪽 방향 / 블루)
+						<div class="tooltip_pop top">
+							<div class="cont">
+								<p>
+									버튼을 클릭하면 전체 접수 정보를 확인 하실 수 있습니다.
+								</p>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li style="width:100%;">
+					<div class="tooltip hover">툴팁(호버 / 위쪽 방향 / 핑크)
+						<div class="tooltip_pop bottom bg_pink">
+							<div class="cont">
+								<p>
+									버튼을 클릭하면 전체 접수 정보를 확인 하실 수 있습니다.
+								</p>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li style="width:100%;">
+					<div class="tooltip hover">툴팁(호버 / 아래쪽 방향 / 핑크)
+						<div class="tooltip_pop top bg_pink">
+							<div class="cont">
+								<p>
+									버튼을 클릭하면 전체 접수 정보를 확인 하실 수 있습니다.
+								</p>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li style="width:100%;">
+					<div class="tooltip hover">툴팁(예외 - 큰사이즈)
+						<div class="tooltip_pop bottom bg_pink wide">
+							<div class="cont">
+								<strong>문서 내용을 확인하고, 서명을 진행해 주세요.</strong>
+								<p>
+									[전자 서명 (사인 그리기 | 서명 이미지 업로드)] 또는 다운로드 받으신 PDF에 서명하신 다음 [서명완료 업로드] 도 가능합니다.
+								</p>
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+<!-- 코드 삽입 -->
+<pre class="language-html"><code>&lt;!-- 기본 hover 툴팁 -->
+&lt;div class="tooltip hover">툴팁(호버) &lt;!-- hover 툴팁의 경우 hover 클래스 추가 -->
+	&lt;div class="tooltip_pop bottom"> &lt;!-- bottom 은 화살표의 방향 / BG가 pink시 bg_pink 클래스 추가 -->
+		&lt;div class="cont">
+			&lt;p>
+				버튼을 클릭하면 전체&lt;br>
+				접수 정보를 확인&lt;br>
+				하실 수 있습니다.
+			&lt;/p>
+		&lt;/div>
+	&lt;/div>
+&lt;/div>
+</code></pre>
+<!-- 코드 삽입 -->
+
+
+			<h2 class="title mt30">툴팁 (Click)</h2>
+			<div class="conIn_tip"></div>
+			<div style="width:100%;text-align:center;">
+				<div class="tooltip">
+					<a href="javascript:void(0)" class="click"></a>
+					<div class="tooltip_pop bottom">
+						<div class="cont">
+							<strong>선적항이 업데이트 되었습니다.</strong>
+							<p>ETD-선적항  >  ATD-선적항</p>
+						</div>
+					</div>
+				</div>
+			</div>
+<!-- 코드 삽입 -->
+<pre class="language-html"><code>&lt;!-- 툴팁 클릭 -->
+&lt;div class="tooltip">
+	&lt;a href="javascript:void(0)" class="click">&lt;/a> &lt;!-- click 클래스 추가 -->
+	&lt;div class="tooltip_pop bottom">
+		&lt;div class="cont">
+			&lt;strong>선적항이 업데이트 되었습니다.&lt;/strong> &lt;!-- 타이틀 있을 시 -->
+			&lt;p>ETD-선적항  >  ATD-선적항&lt;/p>
+		&lt;/div>
+	&lt;/div>
+&lt;/div>
+</code></pre>
+<!-- 코드 삽입 -->
+
+
+			<h2 class="title mt30">완료 및 툴팁 팝업</h2>
+			<div class="conIn_tip"></div>
+			<ul style="display:flex;text-align:center;justify-content:center;">
+				<li style="width:100%;">
+					<div class="tooltip">
+						<a href="javascript:void(0)" class="click"></a>
+						<div class="tooltip_pop top comp">
+							<div class="cont">
+								<img src="../../../images/em/img/img_order_tool_comp.png" alt="" />
+							</div>
+							<div class="txt_box">
+								<strong>
+									신규 주문 요청<br>
+									OR-210930-00001이 접수되었습니다.
+								</strong>
+								<p>
+									LG화학 영업 담당자 검토 후<br>
+									연락 드리겠습니다.
+								</p>
+							</div>
+							<a href="javascript:void(0)" class="btn_close">닫기</a>
+						</div>
+					</div>
+				</li>
+				<li style="width:100%;">
+					<div class="tooltip">
+						<a href="javascript:void(0)" class="click"></a>
+						<div class="tooltip_pop top comp">
+							<div class="cont">
+								<img src="../../../images/em/img/img_order_tool_comp.png" alt="" />
+							</div>
+							<div class="txt_box">
+								<strong>
+									신규 주문 요청<br>
+									OR-210930-00001이 접수되었습니다.
+								</strong>
+								<p>
+									LG화학 영업 담당자 검토 후<br>
+									연락 드리겠습니다.
+								</p>
+								<p class="date">취소일 : 2021-11-12</p>
+							</div>
+							<a href="javascript:void(0)" class="btn_close">닫기</a>
+						</div>
+					</div>
+				</li>
+			</ul>
+<!-- 코드 삽입 -->
+<pre class="language-html"><code>&lt;!-- 툴팁 팝업 형태 -->
+&lt;div class="tooltip">
+	&lt;a href="javascript:void(0)" class="click">&lt;/a>
+	&lt;div class="tooltip_pop top comp"> &lt;!-- comp로 클래스 추가 -->
+		&lt;div class="cont">
+			&lt;img src="../../../images/em/img/img_order_tool_comp.png" alt="" />
+		&lt;/div>
+		&lt;div class="txt_box">
+			&lt;strong>
+				신규 주문 요청&lt;br>
+				OR-210930-00001이 접수되었습니다.
+			&lt;/strong>
+			&lt;p>
+				LG화학 영업 담당자 검토 후&lt;br>
+				연락 드리겠습니다.
+			&lt;/p>
+		&lt;/div>
+		&lt;a href="javascript:void(0)" class="btn_close">닫기&lt;/a>
+	&lt;/div>
+&lt;/div>
+</code></pre>
+<!-- 코드 삽입 -->
+
+
+			<h2 class="title mt30">제품 입력 방식 툴팁 팝업</h2>
+			<div class="conIn_tip"></div>
+			<div style="display:flex;justify-content:center;width:100%;">
+				<div class="tooltip">
+					<a href="javascript:void(0)" class="click"></a>
+					<div class="tooltip_pop top pro_info">
+						<div class="cont">
+							<dl>
+								<dt>제품 입력 방식이란?</dt>
+								<dd>
+									LG Chem On은  주문 시 두 가지 방식의 주문 제품 입력 방식을 지원하고 있습니다.<br>
+									생산 단위를 가리키는 제품 코드를 정확히 모를 경우 제품명만<br>
+									선택하셔도 주문 진행이 가능합니다.
+								</dd>
+							</dl>
+						</div>
+						<div class="txt_box flex">
+							<dl>
+								<dt>제품명 & 포장 조합 입력이란?</dt>
+								<dd>
+									LG화학 제품 코드를 모르신다고요?<br>
+									제품 메뉴에 등록된 제품명으로 주문 요청할 수 있습니다.<br>
+									제품명을 선택 후 주문 수량을 입력하시면 주문 요청이 완료됩니다. 만약 원하시는 포장 유형이 있다면 추가로 입력하시면 됩니다.
+								</dd>
+							</dl>
+							<dl>
+								<dt>제품 코드 입력이란?</dt>
+								<dd>
+									제품명과 포장 유형을 조합한 LG화학의 제품 코드를<br>
+									이미 알고 계신다면, 바로 제품 코드를 입력하여 주문 요청을 완료하실 수 있습니다. 제품코드를 선택 후 주문 수량을 입력하시면 주문 요청이 완료됩니다.
+								</dd>
+							</dl>
+						</div>
+						<a href="javascript:void(0)" class="btn_close">닫기</a>
+					</div>
+				</div>
+			</div>
+<!-- 코드 삽입 -->
+<pre class="language-html"><code>&lt;!-- 제품 입력 방식 툴팁 팝업 -->
+&lt;div class="tooltip">
+	&lt;a href="javascript:void(0)" class="click">&lt;/a>
+	&lt;div class="tooltip_pop top pro_info"> &lt;!-- pro_info로 클래스 추가 -->
+		&lt;div class="cont">
+			&lt;dl>
+				&lt;dt>제품 입력 방식이란?&lt;/dt>
+				&lt;dd>
+					LG Chem On은  주문 시 두 가지 방식의 주문 제품 입력 방식을 지원하고 있습니다.&lt;br>
+					생산 단위를 가리키는 제품 코드를 정확히 모를 경우 제품명만&lt;br>
+					선택하셔도 주문 진행이 가능합니다.
+				&lt;/dd>
+			&lt;/dl>
+		&lt;/div>
+		&lt;div class="txt_box flex">
+			&lt;dl>
+				&lt;dt>제품명 & 포장 조합 입력이란?&lt;/dt>
+				&lt;dd>
+					LG화학 제품 코드를 모르신다고요?&lt;br>
+					제품 메뉴에 등록된 제품명으로 주문 요청할 수 있습니다.&lt;br>
+					제품명을 선택 후 주문 수량을 입력하시면 주문 요청이 완료됩니다. 만약 원하시는 포장 유형이 있다면 추가로 입력하시면 됩니다.
+				&lt;/dd>
+			&lt;/dl>
+			&lt;dl>
+				&lt;dt>제품 코드 입력이란?&lt;/dt>
+				&lt;dd>
+					제품명과 포장 유형을 조합한 LG화학의 제품 코드를&lt;br>
+					이미 알고 계신다면, 바로 제품 코드를 입력하여 주문 요청을 완료하실 수 있습니다. 제품코드를 선택 후 주문 수량을 입력하시면 주문 요청이 완료됩니다.
+				&lt;/dd>
+			&lt;/dl>
+		&lt;/div>
+		&lt;a href="javascript:void(0)" class="btn_close">닫기&lt;/a>
+	&lt;/div>
+&lt;/div>
+</code></pre>
+<!-- 코드 삽입 -->
+
+
+			<h2 class="title mt30">내용 더보기 툴팁</h2>
+			<div class="conIn_tip"></div>
+			<ul style="display:flex;text-align:center;justify-content:center;">
+				<li style="width:100%;">
+					툴팁 - 기본
+					<div class="tooltip hover">
+						<span class="count_tag">+99</span>
+						<div class="tooltip_pop top info_more">
+							<div class="cont mCustomScrollbar">
+								<ul>
+									<li class="on">
+										<span>214011234N</span>
+									</li>
+									<li>
+										<span>214011234N</span>
+									</li>
+									<li>
+										<span>214011234N</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li style="width:100%;">
+					툴팁 - 5개 이상일때
+					<div class="tooltip hover">
+						<span class="count_tag">+99</span>
+						<div class="tooltip_pop top info_more">
+							<div class="cont mCustomScrollbar">
+								<ul>
+									<li class="on">
+										<span>214011234N</span>
+									</li>
+									<li>
+										<span>214011234N</span>
+									</li>
+									<li>
+										<span>214011234N</span>
+									</li>
+									<li>
+										<span>214011234N</span>
+									</li>
+									<li>
+										<span>214011234N</span>
+									</li>
+									<li>
+										<span>214011234N</span>
+									</li>
+									<li>
+										<span>214011234N</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li style="width:100%;">
+					툴팁 - 가로 190일때
+					<div class="tooltip hover">
+						<span class="count_tag">+99</span>
+						<div class="tooltip_pop top info_more min_w190">
+							<div class="cont mCustomScrollbar">
+								<ul>
+									<li class="on">
+										<span>A312B</span>
+										<span>3,000kg</span>
+									</li>
+									<li>
+										<span>A312B221C</span>
+										<span>1,000L</span>
+									</li>
+									<li>
+										<span>A312B221C</span>
+										<span>1,000L</span>
+									</li>
+									<li>
+										<span>A312B</span>
+										<span>3,000kg</span>
+									</li>
+									<li>
+										<span>A312B221C</span>
+										<span>3,000kg</span>
+									</li>
+									<li>
+										<span>A312B221C</span>
+										<span>1,000L</span>
+									</li>
+									<li>
+										<span>A312B</span>
+										<span>3,000kg</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li style="width:100%;">
+					툴팁 - 가로 272일때
+					<div class="tooltip hover">
+						<span class="count_tag">+99</span>
+						<div class="tooltip_pop top info_more min_w272">
+							<div class="cont mCustomScrollbar">
+								<ul>
+									<li class="on">
+										<span>SO 10887948</span>
+										<span>21401A / 3,000 kg</span>
+									</li>
+									<li>
+										<span>SO 10887948</span>
+										<span>21401A / 3,000 kg</span>
+									</li>
+									<li>
+										<span>SO 10887948</span>
+										<span>21401A / 3,000 kg</span>
+									</li>
+									<li>
+										<span>SO 10887948</span>
+										<span>21401A / 3,000 kg</span>
+									</li>
+									<li>
+										<span>SO 10887948</span>
+										<span>21401A / 3,000 kg</span>
+									</li>
+									<li>
+										<span>SO 10887948</span>
+										<span>21401A / 3,000 kg</span>
+									</li>
+									<li>
+										<span>SO 10887948</span>
+										<span>21401A / 3,000 kg</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li style="width:100%;">
+					툴팁 - 텍스트 3줄
+					<div class="tooltip hover">
+						<span class="count_tag">+99</span>
+						<div class="tooltip_pop top info_more min_w272">
+							<div class="cont mCustomScrollbar">
+								<ul>
+									<li class="on">
+										<span>SHANGHAI WUXIN TRADE CO. LTD</span>
+									</li>
+									<li>
+										<span>QINGDAO DENGLONG UZHOU TRADE CO. LTDQINGDAO DENGLONG UZHOUDENGLONG TRADE CO. LTD</span>
+									</li>
+									<li>
+										<span>SHANGHAI WUXIN TRADE CO. LTD</span>
+									</li>
+									<li>
+										<span>QINGDAO DENGLONG UZHOU TRADE CO. LTD</span>
+									</li>
+									<li>
+										<span>SHANGHAI WUXIN TRADE CO. LTD</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+			<script type="text/javascript">
+				$(function(){
+					$('.tooltip_pop.info_more li').mouseenter(function(){
+						$(this).addClass('on').siblings().removeClass('on');
+					});
+				});
+			</script>
+<!-- 코드 삽입 -->
+<pre class="language-html"><code>&lt;!-- 기본 -->
+툴팁 - 기본
+&lt;div class="tooltip hover">
+	&lt;span class="count_tag">+99&lt;/span>
+	&lt;div class="tooltip_pop top info_more"> &lt;!-- info_more 클래스 추가 -->
+		&lt;div class="cont mCustomScrollbar">
+			&lt;ul>
+				&lt;li class="on"> &lt;!-- 활성화 시 on 클래스 추가 -->
+					&lt;span>214011234N&lt;/span>
+				&lt;/li>
+				&lt;li>
+					&lt;span>214011234N&lt;/span>
+				&lt;/li>
+				&lt;li>
+					&lt;span>214011234N&lt;/span>
+				&lt;/li>
+			&lt;/ul>
+		&lt;/div>
+	&lt;/div>
+&lt;/div>
+
+&lt;!-- Width 190 및 2개가 노출될 경우 -->
+툴팁 - 가로 190일때
+&lt;div class="tooltip hover">
+	&lt;span class="count_tag">+99&lt;/span>
+	&lt;div class="tooltip_pop top info_more min_w190"> &lt;!-- min_w190 클래스 추가 -->
+		&lt;div class="cont mCustomScrollbar">
+			&lt;ul>
+				&lt;li class="on">
+					&lt;span>A312B&lt;/span>
+					&lt;span>3,000kg&lt;/span>
+				&lt;/li>
+				&lt;li>
+					&lt;span>A312B221C&lt;/span>
+					&lt;span>1,000L&lt;/span>
+				&lt;/li>
+				&lt;li>
+					&lt;span>A312B221C&lt;/span>
+					&lt;span>1,000L&lt;/span>
+				&lt;/li>
+				&lt;li>
+					&lt;span>A312B&lt;/span>
+					&lt;span>3,000kg&lt;/span>
+				&lt;/li>
+				&lt;li>
+					&lt;span>A312B221C&lt;/span>
+					&lt;span>3,000kg&lt;/span>
+				&lt;/li>
+				&lt;li>
+					&lt;span>A312B221C&lt;/span>
+					&lt;span>1,000L&lt;/span>
+				&lt;/li>
+				&lt;li>
+					&lt;span>A312B&lt;/span>
+					&lt;span>3,000kg&lt;/span>
+				&lt;/li>
+			&lt;/ul>
+		&lt;/div>
+	&lt;/div>
+&lt;/div>
+
+&lt;!-- Width 272일 경우 -->
+툴팁 - 가로 272일때
+&lt;div class="tooltip hover">
+	&lt;span class="count_tag">+99&lt;/span>
+	&lt;div class="tooltip_pop top info_more min_w272"> &lt;!-- min_w272 클래스 추가 -->
+		&lt;div class="cont mCustomScrollbar">
+			&lt;ul>
+				&lt;li class="on">
+					&lt;span>SO 10887948&lt;/span>
+					&lt;span>21401A / 3,000 kg&lt;/span>
+				&lt;/li>
+				&lt;li>
+					&lt;span>SO 10887948&lt;/span>
+					&lt;span>21401A / 3,000 kg&lt;/span>
+				&lt;/li>
+				&lt;li>
+					&lt;span>SO 10887948&lt;/span>
+					&lt;span>21401A / 3,000 kg&lt;/span>
+				&lt;/li>
+				&lt;li>
+					&lt;span>SO 10887948&lt;/span>
+					&lt;span>21401A / 3,000 kg&lt;/span>
+				&lt;/li>
+				&lt;li>
+					&lt;span>SO 10887948&lt;/span>
+					&lt;span>21401A / 3,000 kg&lt;/span>
+				&lt;/li>
+				&lt;li>
+					&lt;span>SO 10887948&lt;/span>
+					&lt;span>21401A / 3,000 kg&lt;/span>
+				&lt;/li>
+				&lt;li>
+					&lt;span>SO 10887948&lt;/span>
+					&lt;span>21401A / 3,000 kg&lt;/span>
+				&lt;/li>
+			&lt;/ul>
+		&lt;/div>
+	&lt;/div>
+&lt;/div>
+</code></pre>
+<!-- 코드 삽입 -->
+		</div>
+	</div>
+
+
+</div>
+</body>
+</html>

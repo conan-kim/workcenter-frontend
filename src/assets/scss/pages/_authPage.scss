@@ -1,0 +1,72 @@
+.pdt-0 {
+  padding-top: 0 !important;
+}
+
+.auth-page {
+  .tab-content {
+    margin-top: 20px;
+  }
+
+  .certification-info {
+    margin-bottom: 48px;
+    color: $color-3;
+    @include fontCustom(16px,400,1.5,-0.4px);
+  }
+
+  .agreeBox {
+    & + .button-wrap {
+      padding-top: 48px;
+    }
+  }
+}
+
+.auth-log-box {
+  .info-text-box {
+    padding: 61px 0 60px;
+    text-align: center;
+
+    .text {
+      @include fontCustom(20px,400,1.4,-0.5px);
+
+      & + .text {
+        margin-top: 20px;
+      }
+    }
+
+    .user-mail-info {
+      @include fontCustom(24px,700,1.17,-0.6px);
+    }
+  }
+
+  .button-wrap {
+    padding-top: 0;
+  }
+}
+
+.content {
+  &.auth-form {
+    padding: 41px 0 32px;
+
+    .field-form {
+      & + .field-form {
+        margin-top: 32px;
+      }
+    }
+
+    & + .button-wrap {
+      padding-top: 0;
+    }
+  }
+
+  &.find-form {
+    padding-bottom: 20px;
+
+    .title {
+      text-align: center;
+    }
+
+    & + .button-wrap {
+      padding-top: 0;
+    }
+  }
+}

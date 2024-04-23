@@ -1,0 +1,72 @@
+.accordion {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  // padding: 10px 20px;
+  border-bottom: 1px solid #222;
+  .accordion-title {
+    .headline {
+      width: 100%;
+      font-size: 20px;
+      text-align: left;
+      font-weight: bold;
+      background-color: #fff;
+      line-height: normal;
+      letter-spacing: -0.5px;
+      color: #222;
+      padding: 20px 0;
+      border-top: 1px solid #222;
+      &::after {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        right: 12px;
+        width: 20px;
+        height: 20px;
+        background: url(@@/assets/images/icons/arrow-down.png) center no-repeat;
+      }
+      &.show {
+        &::after {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+  &.show {
+    .accordion-content {
+      height: auto;
+      overflow: visible;
+      max-height: 9999;
+      transition: all 0.3s cubic-bezier(0,1,0,1);
+    }
+  }
+  .cont-title {
+    font-size: 20px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: -0.5px;
+    text-align: left;
+    color: #222;
+    padding-top: 48px;
+    border-top: 1px solid #ddd;
+    &:not(:nth-of-type(2)) {
+      border-top: transparent;
+    }
+  }
+  .accordion-content {
+    background-color: #fff;
+    z-index: 999;
+    transition: all 0.3s;
+    background-color: #ffffff;
+    border-top: 1px solid $bdColor-3;
+    .cont-area {
+      padding: 32px 0 48px 0;
+      background-color: #fff;
+      .field-form:not(:first-of-type) {
+        margin-top: 48px;
+      }
+    }
+  }
+}

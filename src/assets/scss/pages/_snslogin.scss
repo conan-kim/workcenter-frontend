@@ -1,0 +1,60 @@
+.sns-login{
+  .button-wrap{
+    padding-top:0;
+    margin-top: 32px;
+    .button{
+      @include fontCustom(20px,700,null,-0.5px);
+    }
+  }
+
+  .sns-login-top{
+    text-align: center;
+    padding-bottom: 60px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid $color-8;
+    .sns-top-text{
+      @include fontCustom(20px,null,28px,-0.5px);
+      margin-bottom: 20px;
+    }
+    strong{
+      @include fontCustom(24px,null,28px,-0.6px);
+    }
+  }
+  .sns-login-bottom{
+    text-align: center;
+    .sns-bottom-text{
+      @include fontCustom(14px,null,28px,-0.35px);
+      margin-bottom: 20px;
+    }
+    .sns-login-area{
+      .sns-login-list{
+        @include flex-center-start;
+        .sns-login-item{
+          .sns-button{
+            text-indent: -9999px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            overflow: hidden;
+          }
+          .kakao{
+            background: url(/assets/images/icons/ico-sns-kakao.png) no-repeat center center/100%;
+          }
+          .apple{
+            background: url(/assets/images/icons/ico-sns-apple.png) no-repeat center center/100%;
+            margin: 0 24px;
+          }
+          .naver{
+            background: url(/assets/images/icons/ico-sns-naver.png) no-repeat center center/100%;
+          }
+        }
+      }
+    }
+    .sns-account-button{
+      margin-top: 48px;
+      .button{
+        @include fontCustom(16px,400,null,null);
+      }
+    }
+  }
+}

@@ -1,0 +1,1183 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<title>PLOONET WORKCENTER CODING GUIDE</title>
+	<!-- css -->
+	<link rel="stylesheet" href="css/reset.css" type="text/css" />
+	<link rel="stylesheet" href="css/fonts.css" type="text/css" />
+	<!-- script -->
+	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+	<!-- plugin -->
+	<link rel="stylesheet" href="docs/guide.css" type="text/css" />
+	<style type="text/css">
+		/* table{border-top:1px solid #999;border-left:1px solid #999; color:#666;} */
+		table tr:hover td {
+			background: #fffad2 !important;
+		}
+
+		/*table tr:nth-child(2n){background:#eee;}*/
+		table th,
+		td {
+			line-height: 25px !important;
+			border-bottom: 1px solid #dfdfdf;
+			border-right: 1px solid #dfdfdf;
+		}
+
+		/* table thead th{padding:5px 8px;height:36px;background:#444;color:#fff;} */
+		table thead th {
+			padding: 5px 8px;
+			color: #000;
+			background: #d6f0f6;
+			font-size: 15px;
+			height: 40px;
+			border-top: 2px solid #004b8d;
+			border-right: 1px solid #fff;
+		}
+
+		table tbody td {
+			padding: 3px 8px;
+			height: 34px;
+			font-size: 14px;
+			text-align: center;
+		}
+
+		table tbody td a {
+			display: block;
+			font-size: 11px;
+			background: #ccc;
+			border-radius: 4px;
+		}
+
+		table tbody td.txtLeft {
+			text-align: left;
+		}
+
+		table thead th:last-child,
+		table tbody td:last-child {
+			border-right: none;
+		}
+
+		table tbody tr.end td {
+			background-color: #eee;
+		}
+
+		table tbody tr.end td a {
+			background: #004b8d;
+			color: #fff;
+		}
+
+		table tbody tr.ing td {
+			background-color: #fff6e5;
+		}
+
+		table tbody tr.ing td a {
+			background: #004b8d;
+			color: #fff;
+		}
+
+		table tbody tr.guide {
+			background-color: #000;
+		}
+
+		table tbody tr.guide td {
+			color: #fff;
+		}
+
+		table tbody tr.guide:hover td {
+			color: #000;
+		}
+
+		table tbody tr.guide td a {
+			background: #004b8d;
+			color: #fff;
+		}
+
+		table tbody .red {
+			color: red;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="wrap">
+		<div class="guide_header"><em>PLOONET WORKCENTER</em> 프로젝트 coding guide</div>
+		<div class="content">
+			<h1>LIST PAGE</h1>
+			<div class="ver_view">
+				<p>Version : <b>0.0.01</b></p>
+				<p>Start Day : <b>2023.05.31</b></p>
+				<p>Coding : <b>React</b></p>
+			</div>
+
+			<div class="box">
+				<h2>유의사항</h2>
+				<ol class="atten">
+					<li>[class = > className 바꿔서 진행</li>
+					<li>for="" => htmlFor="" Form for 사용시 htmlFor로 사용</li>
+					<li>jsx내 테그 삽입시 하나로 감싸져 있지 않으면 빈 테그로 한번 감싸기</li>
+				</ol>
+			</div>
+			<table>
+				<colgroup>
+					<col style="width:4%;">
+					<col style="width:8%;">
+					<col style="width:10%;">
+					<col style="width:15%;">
+					<col style="width:10%;">
+					<col style="width:8%;">
+					<col style="width:13%;">
+					<col style="width:8%;">
+					<col style="width:8%;">
+					<col style="width:6%;">
+					<col style="width:6%;">
+					<col style="width:10%;">
+				</colgroup>
+				<thead>
+					<tr>
+						<th>NO</th>
+						<th>Depth1</th>
+						<th>Depth2</th>
+						<th>Depth3</th>
+						<th>Depth4</th>
+						<th>Folder Name</th>
+						<th>PageID</th>
+						<th>View</th>
+						<th>State</th>
+						<th>담당자</th>
+						<th>End Day</th>
+						<th>etc</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>99</td>
+						<td class="txtLeft">가이드 및 샘플</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft"></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td class="txtLeft"></td>
+					</tr>
+					<tr class="guide">
+						<td>99</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">폼 요소</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">FormGuide</td>
+						<td><a href="/form-guide" target="_blank">View</a></td>
+						<td class="ing">완료</td>
+						<td>박예림</td>
+						<td></td>
+						<td class="txtLeft"></td>
+					</tr>
+					<tr class="guide">
+						<td>99</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">컨텐츠 레이아웃</td>
+						<td class="txtLeft">Box형태 레이아웃</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">ContentsLayoutGuide</td>
+						<td><a href="/contents-layout-guide" target="_blank">View</a></td>
+						<td class="ing">완료</td>
+						<td>엄정훈</td>
+						<td></td>
+						<td class="txtLeft"></td>
+					</tr>
+					<tr class="guide">
+						<td>99</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">Lnb가 있는 레이아웃</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">ContentsLayoutLnbGuide</td>
+						<td><a href="/contents-layout-lnb-guide" target="_blank">View</a></td>
+						<td class="ing">완료</td>
+						<td>엄정훈</td>
+						<td></td>
+						<td class="txtLeft"></td>
+					</tr>
+					<tr class="guide">
+						<td>99</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">다중 팝업 샘플</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">PopupClosePopup</td>
+						<td><a href="/popup-close-popup" target="_blank">View</a></td>
+						<td class="ing">완료</td>
+						<td>오진석</td>
+						<td></td>
+						<td class="txtLeft"></td>
+					</tr>
+					<tr class="guide">
+						<td>99</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">팝업 가이드</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">PopupGuide</td>
+						<td><a href="/popup-guide" target="_blank">View</a></td>
+						<td class="end">완료</td>
+						<td>오진석</td>
+						<td></td>
+						<td class="txtLeft"></td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td class="txtLeft">로그인</td>
+						<td class="txtLeft">로그인</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">auth</td>
+						<td class="txtLeft">Login</td>
+						<td><a href="/" target="_blank">View</a></td>
+						<td class="ing">작업중</td>
+						<td></td>
+						<td></td>
+						<td class="txtLeft">[팝업 레이어] 로그인 - 작업</td>
+					</tr>
+					<tr class="end">
+						<td>2</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">통합서비스안내</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">auth</td>
+						<td class="txtLeft">LoginServiceInfo</td>
+						<td><a href="/login-service-info" target="_blank">View</a></td>
+						<td class="end">완료</td>
+						<td>오진석</td>
+						<td></td>
+						<td class="txtLeft"></td>
+					</tr>
+					<tr class="end">
+						<td>3</td>
+						<td class="txtLeft">통합회원가입</td>
+						<td class="txtLeft">회원가입(Tab)-인증</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">auth</td>
+						<td class="txtLeft">InteJoinMembership</td>
+						<td><a href="/inte-join-membership" target="_blank">View</a></td>
+						<td class="end">완료</td>
+						<td>엄정훈</td>
+						<td></td>
+						<td class="txtLeft"></td>
+					</tr>
+					<tr class="end">
+						<td>4</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">회원가입</td>
+						<td class="txtLeft">개인으로 가입</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">auth</td>
+						<td class="txtLeft">InteIndividualForm</td>
+						<td><a href="/inte-individual-form" target="_blank">View</a></td>
+						<td class="end">완료</td>
+						<td>박예림</td>
+						<td></td>
+						<td class="txtLeft"></td>
+					</tr>
+					<tr class="end">
+						<td>5</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">기업으로 가입</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">auth</td>
+						<td class="txtLeft">InteCorporateForm</td>
+						<td><a href="/inte-corporate-form" target="_blank">View</a></td>
+						<td class="end">완료</td>
+						<td>박예림</td>
+						<td></td>
+						<td class="txtLeft"></td>
+					</tr>
+					<tr class="end">
+						<td>6</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">[팝업] 사업자등록번호 오류</td>
+						<td class="txtLeft">auth</td>
+						<td class="txtLeft">CorporatePopup1</td>
+						<td><a href="/corporate-popup1" target="_blank">View</a></td>
+						<td class="end">완료</td>
+						<td>오진석</td>
+						<td></td>
+						<td class="txtLeft"></td>
+					</tr>
+					<tr class="end">
+						<td>7</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">[팝업] 기가입계정있음</td>
+						<td class="txtLeft">auth</td>
+						<td class="txtLeft">CorporatePopup2</td>
+						<td><a href="/corporate-popup2" target="_blank">View</a></td>
+						<td class="end">완료</td>
+						<td>오진석</td>
+						<td></td>
+						<td class="txtLeft"></td>
+					</tr>
+					<tr class="end">
+						<td>8</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">[팝업] 인증메일발송</td>
+						<td class="txtLeft">auth</td>
+						<td class="txtLeft">CorporatePopup3</td>
+						<td><a href="/corporate-popup3" target="_blank">View</a></td>
+						<td class="end">완료</td>
+						<td>오진석</td>
+						<td></td>
+						<td class="txtLeft"></td>
+					</tr>
+					<tr class="end">
+						<td>9</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">[팝업] 이메일주소오류</td>
+						<td class="txtLeft">auth</td>
+						<td class="txtLeft">CorporatePopup4</td>
+						<td><a href="/corporate-popup4" target="_blank">View</a></td>
+						<td class="end">완료</td>
+						<td>오진석</td>
+						<td></td>
+						<td class="txtLeft"></td>
+					</tr>
+					<tr class="end">
+						<td>10</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">[팝업] 인증유효시간경과</td>
+						<td class="txtLeft">auth</td>
+						<td class="txtLeft">CorporatePopup5</td>
+						<td><a href="/corporate-popup5" target="_blank">View</a></td>
+						<td class="end">완료</td>
+						<td>오진석</td>
+						<td></td>
+						<td class="txtLeft"></td>
+					</tr>
+					<tr class="end">
+						<td>10</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">[팝업] 개업일자 오류</td>
+						<td class="txtLeft">auth</td>
+						<td class="txtLeft">CorporatePopup6</td>
+						<td><a href="/corporate-popup6" target="_blank">View</a></td>
+						<td class="end">완료</td>
+						<td>박예림</td>
+						<td></td>
+						<td class="txtLeft"></td>
+					</tr>
+					<tr class="end">
+						<td>10</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">[팝업] 사업자등록번호는 맞으나, 회사명 일치하지 않을 시</td>
+						<td class="txtLeft">auth</td>
+						<td class="txtLeft">CorporatePopup7</td>
+						<td><a href="/corporate-popup7" target="_blank">View</a></td>
+						<td class="end">완료</td>
+						<td>박예림</td>
+						<td></td>
+						<td class="txtLeft"></td>
+					</tr>
+					<tr class="end">
+						<td>11</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">SNS</td>
+						<td class="txtLeft">인증</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">auth</td>
+						<td class="txtLeft">SnsAgree</td>
+						<td><a href="/sns-agree" target="_blank">View</a></td>
+						<td class="end">완료</td>
+						<td>오진석</td>
+						<td></td>
+						<td class="txtLeft"></td>
+					</tr>
+					<tr class="end">
+						<td>12</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">계정로그인연동</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">auth</td>
+						<td class="txtLeft">LoginSns</td>
+						<td><a href="/login-sns" target="_blank">View</a></td>
+						<td class="end">완료</td>
+						<td>오진석</td>
+						<td></td>
+						<td class="txtLeft"></td>
+					</tr>
+					<tr class="end">
+						<td>13</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">[팝업] 소셜계정연동</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">auth</td>
+						<td class="txtLeft">SocialCompPopup</td>
+						<td><a href="/social-comp-popup" target="_blank">View</a></td>
+						<td class="end">완료</td>
+						<td>오진석</td>
+						<td></td>
+						<td class="txtLeft"></td>
+					</tr>
+					<tr class="end">
+						<td>14</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">[팝업] 로그인</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">auth</td>
+						<td class="txtLeft">LoginPopup</td>
+						<td><a href="/login-popup" target="_blank">View</a></td>
+						<td class="end">완료</td>
+						<td>오진석</td>
+						<td></td>
+						<td class="txtLeft"></td>
+					</tr>
+					<tr class="end">
+						<td>14</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">[팝업] 로그인</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">auth</td>
+						<td class="txtLeft">LoginPopup1</td>
+						<td><a href="/login-popup1" target="_blank">View</a></td>
+						<td class="end">완료</td>
+						<td>박예림</td>
+						<td></td>
+						<td class="txtLeft"></td>
+					</tr>
+					<tr class="end">
+						<td>15</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">[팝업 레이어] 로그인</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">auth</td>
+						<td class="txtLeft">LoginPopupLayer</td>
+						<td><a href="/login-popup-layer" target="_blank">View</a></td>
+						<td class="end">완료</td>
+						<td>오진석</td>
+						<td></td>
+						<td class="txtLeft"></td>
+					</tr>
+					<tr class="end">
+						<td>16</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">플루니안설정(Tab)</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">auth</td>
+						<td class="txtLeft">IntePloonianSettings</td>
+						<td><a href="/inte-ploonian-settings" target="_blank">View</a></td>
+						<td class="end">완료</td>
+						<td>오진석</td>
+						<td></td>
+						<td class="txtLeft"></td>
+					</tr>
+					<tr class="end">
+						<td>17</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">가입완료</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">auth</td>
+						<td class="txtLeft">InteJoinCompleted</td>
+						<td><a href="/inte-join-completed" target="_blank">View</a></td>
+						<td class="end">완료</td>
+						<td>오진석</td>
+						<td></td>
+						<td class="txtLeft"></td>
+					</tr>
+					<tr class="end">
+						<td>18</td>
+						<td class="txtLeft">계정찾기</td>
+						<td class="txtLeft">아이디찾기(Tab)</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">auth</td>
+						<td class="txtLeft">FindId</td>
+						<td><a href="/find-id" target="_blank">View</a></td>
+						<td class="end">완료</td>
+						<td>엄정훈</td>
+						<td></td>
+						<td class="txtLeft"></td>
+					</tr>
+					<tr class="end">
+						<td>19</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">비밀번호 찾기 입력</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">auth</td>
+						<td class="txtLeft">FindPassword</td>
+						<td><a href="/find-password" target="_blank">View</a></td>
+						<td class="end">완료</td>
+						<td>엄정훈</td>
+						<td></td>
+						<td class="txtLeft"></td>
+					</tr>
+					<tr class="end">
+						<td>20</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">이메일 발송</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">auth</td>
+						<td class="txtLeft">SendEmail</td>
+						<td><a href="/send-email" target="_blank">View</a></td>
+						<td class="end">완료</td>
+						<td>엄정훈</td>
+						<td></td>
+						<td class="txtLeft"></td>
+					</tr>
+					<tr class="end">
+						<td>21</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">[팝업] 가입정보없음</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">auth</td>
+						<td class="txtLeft">NotUserInfoPopup</td>
+						<td><a href="/notuser-info-popup" target="_blank">View</a></td>
+						<td class="end">완료</td>
+						<td>오진석</td>
+						<td></td>
+						<td class="txtLeft"></td>
+					</tr>
+					<tr class="end">
+						<td>22</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">비밀번호 변경</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">auth</td>
+						<td class="txtLeft">ChangePassword</td>
+						<td><a href="/change-password" target="_blank">View</a></td>
+						<td class="end">완료</td>
+						<td>오진석</td>
+						<td></td>
+						<td class="txtLeft"></td>
+					</tr>
+					<tr class="end">
+						<td>23</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">[팝업] 변경완료</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">auth</td>
+						<td class="txtLeft">ChangePasswordCompPopup</td>
+						<td><a href="/change-password-comp-popup" target="_blank">View</a></td>
+						<td class="end">완료</td>
+						<td>오진석</td>
+						<td></td>
+						<td class="txtLeft"></td>
+					</tr>
+					<tr class="end">
+						<td>24</td>
+						<td class="txtLeft">휴면계정</td>
+						<td class="txtLeft">개인회원</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">dormant</td>
+						<td class="txtLeft">DorIndEmail</td>
+						<td><a href="/dorInd-email" target="_blank">View</a></td>
+						<td class="end">완료</td>
+						<td>엄정훈</td>
+						<td></td>
+						<td class="txtLeft"></td>
+					</tr>
+					<tr class="end">
+						<td>25</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">기업회원(Tab)</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">dormant</td>
+						<td class="txtLeft">DorCorporateMember</td>
+						<td><a href="/dor-corporate-member" target="_blank">View</a></td>
+						<td class="end">완료</td>
+						<td>엄정훈</td>
+						<td></td>
+						<td class="txtLeft"></td>
+					</tr>
+					<tr class="ing">
+						<td>26</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">글로벌회원</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">dormant</td>
+						<td class="txtLeft">DorGlobalMember</td>
+						<td><a href="/dor-global-member" target="_blank">View</a></td>
+						<td class="ing">진행여부 확인 필요</td>
+						<td>-</td>
+						<td></td>
+						<td class="txtLeft"></td>
+					</tr>
+					<tr class="end">
+						<td>27</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">[팝업] 휴면해제완료</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">dormant</td>
+						<td class="txtLeft">DormantCompPopup</td>
+						<td><a href="/dormant-comp-popup" target="_blank">View</a></td>
+						<td class="end">완료</td>
+						<td>오진석</td>
+						<td></td>
+						<td class="txtLeft"></td>
+					</tr>
+					<tr class="end">
+						<td>28</td>
+						<td class="txtLeft">마이페이지</td>
+						<td class="txtLeft">내정보</td>
+						<td class="txtLeft">휴대폰본인인증(SNS가입자)</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">mypage</td>
+						<td class="txtLeft">MyInfoPhone</td>
+						<td><a href="/my-info-phone" target="_blank">View</a></td>
+						<td class="end">완료</td>
+						<td>박예림</td>
+						<td></td>
+						<td class="txtLeft"></td>
+					</tr>
+					<tr class="end">
+						<td>29</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">비밀번호확인-이메일가입자(개인기업)</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">mypage</td>
+						<td class="txtLeft">MyInfoPasswordEmail</td>
+						<td><a href="/my-info-password-email" target="_blank">View</a></td>
+						<td class="end">완료</td>
+						<td>박예림</td>
+						<td></td>
+						<td class="txtLeft"></td>
+					</tr>
+					<tr class="end">
+						<td>30</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">기업회원</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">mypage</td>
+						<td class="txtLeft">MyInfoCorporate</td>
+						<td><a href="/my-info-corporate" target="_blank">View</a></td>
+						<td class="end">완료</td>
+						<td>박예림</td>
+						<td>2023.10.24</td>
+						<td class="txtLeft">
+							<ul>
+								<li>오더일자 : 2023.10.23</li>
+								<li>- 수정자 : 정진호</li>
+								<li>- 나의 플루니안 영역 추가</li>
+								<li>- 사업자등록번호 버튼 추가 (2023.10.31)</li>
+							</ul>
+						</td>
+					</tr>
+					<tr class="end">
+						<td>31</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">개인회원</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">mypage</td>
+						<td class="txtLeft">MyInfoIndividual</td>
+						<td><a href="/my-info-individual" target="_blank">View</a></td>
+						<td class="end">완료</td>
+						<td>박예림</td>
+						<td>2023.10.24</td>
+						<td class="txtLeft">
+							<ul>
+								<li>오더일자 : 2023.10.23</li>
+								<li>- 수정자 : 정진호</li>
+								<li>- 나의 플루니안 영역 추가</li>
+							</ul>
+						</td>
+					</tr>
+					<tr class="end">
+						<td>32</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">[팝업] 비밀번호변경</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">mypage</td>
+						<td class="txtLeft">MyChangePasswordPopup</td>
+						<td><a href="/my-change-password-popup1" target="_blank">View</a></td>
+						<td class="end">완료</td>
+						<td>오진석</td>
+						<td></td>
+						<td class="txtLeft"></td>
+					</tr>
+					<tr class="end">
+						<td>33</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">[팝업] 비밀번호변경완료</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">mypage</td>
+						<td class="txtLeft">MyChangePasswordPopup2</td>
+						<td><a href="/my-change-password-popup2" target="_blank">View</a></td>
+						<td class="end">완료</td>
+						<td>오진석</td>
+						<td></td>
+						<td class="txtLeft"></td>
+					</tr>
+					<tr class="end">
+						<td>34</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">회원탈퇴</td>
+						<td class="txtLeft">[팝업] 입력 폼</td>
+						<td class="txtLeft">mypage</td>
+						<td class="txtLeft">MyWithdrawalPopup1</td>
+						<td><a href="/my-withdrawal-popup1" target="_blank">View</a></td>
+						<td class="end">완료</td>
+						<td>오진석</td>
+						<td></td>
+						<td class="txtLeft"></td>
+					</tr>
+					<tr class="end">
+						<td>35</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">[팝업] 이용중 요금제</td>
+						<td class="txtLeft">mypage</td>
+						<td class="txtLeft">MyWithdrawalPopup2</td>
+						<td><a href="/my-withdrawal-popup2" target="_blank">View</a></td>
+						<td class="end">완료</td>
+						<td>오진석</td>
+						<td></td>
+						<td class="txtLeft"></td>
+					</tr>
+					<tr class="end">
+						<td>36</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">[팝업] 탈퇴 완료</td>
+						<td class="txtLeft">mypage</td>
+						<td class="txtLeft">MyWithdrawalPopup3</td>
+						<td><a href="/my-withdrawal-popup3" target="_blank">View</a></td>
+						<td class="end">완료</td>
+						<td>오진석</td>
+						<td></td>
+						<td class="txtLeft"></td>
+					</tr>
+					<tr class="end">
+						<td>37</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">[팝업] 탈퇴 처리중</td>
+						<td class="txtLeft">mypage</td>
+						<td class="txtLeft">MyWithdrawalPopup4</td>
+						<td><a href="/my-withdrawal-popup4" target="_blank">View</a></td>
+						<td class="end">완료</td>
+						<td>박예림</td>
+						<td></td>
+						<td class="txtLeft"></td>
+					</tr>
+					<tr class="end">
+						<td>38</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">[팝업] SNS연동해지불가</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">mypage</td>
+						<td class="txtLeft">SocialNotPopup</td>
+						<td><a href="/social-not-popup" target="_blank">View</a></td>
+						<td class="end">완료</td>
+						<td>오진석</td>
+						<td></td>
+						<td class="txtLeft"></td>
+					</tr>
+					<tr class="end">
+						<td>39</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">MY문의</td>
+						<td class="txtLeft">웹 문의</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">mypage</td>
+						<td class="txtLeft">MyInquiryWebList</td>
+						<td><a href="/my-inquiry-web-list" target="_blank">View</a></td>
+						<td class="end">완료</td>
+						<td>엄정훈</td>
+						<td></td>
+						<td class="txtLeft"></td>
+					</tr>
+					<tr class="end">
+						<td>40</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">전화 문의</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">mypage</td>
+						<td class="txtLeft">MyInquiryPhoneList</td>
+						<td><a href="/my-inquiry-phone-list" target="_blank">View</a></td>
+						<td class="end">완료</td>
+						<td>엄정훈</td>
+						<td></td>
+						<td class="txtLeft"></td>
+					</tr>
+					<tr class="end">
+						<td>41</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">문의글 작성</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">mypage</td>
+						<td class="txtLeft">MyInquiryWrite</td>
+						<td><a href="/my-inquiry-write" target="_blank">View</a></td>
+						<td class="end">완료</td>
+						<td>엄정훈</td>
+						<td></td>
+						<td class="txtLeft"></td>
+					</tr>
+					<tr class="end">
+						<td>42</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">[팝업] 전화문의상세</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">mypage</td>
+						<td class="txtLeft">MyInquiryPhonePopup</td>
+						<td><a href="/my-inquiry-phone-popup" target="_blank">View</a></td>
+						<td class="ing">완료</td>
+						<td>오진석</td>
+						<td></td>
+						<td class="txtLeft"></td>
+					</tr>
+					<tr class="end">
+						<td>43</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">요금제관리</td>
+						<td class="txtLeft">리스트(empty 포함)</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">mypage</td>
+						<td class="txtLeft">RatePlan</td>
+						<td><a href="/mypage/plan" target="_blank">View</a></td>
+						<td class="ing">완료</td>
+						<td>엄정훈</td>
+						<td></td>
+						<td class="txtLeft"></td>
+					</tr>
+					<tr class="end">
+						<td>44</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">상품요금제취소</td>
+						<td class="txtLeft">[팝업] 요금제 취소 신청</td>
+						<td class="txtLeft">mypage</td>
+						<td class="txtLeft">RatePlanPopup1</td>
+						<td><a href="/rate-plan-popup1" target="_blank">View</a></td>
+						<td class="end">완료</td>
+						<td>오진석</td>
+						<td></td>
+						<td class="txtLeft"></td>
+					</tr>
+					<tr class="end">
+						<td>45</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">[팝업] 취소 완료</td>
+						<td class="txtLeft">mypage</td>
+						<td class="txtLeft">RatePlanPopup2</td>
+						<td><a href="/rate-plan-popup2" target="_blank">View</a></td>
+						<td class="end">완료</td>
+						<td>오진석</td>
+						<td></td>
+						<td class="txtLeft"></td>
+					</tr>
+					<tr class="end">
+						<td>46</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">구독요금제취소</td>
+						<td class="txtLeft">[팝업] 신청</td>
+						<td class="txtLeft">mypage</td>
+						<td class="txtLeft">RatePlanManaPopup1</td>
+						<td><a href="/rate-mana-popup1" target="_blank">View</a></td>
+						<td class="end">완료</td>
+						<td>오진석</td>
+						<td></td>
+						<td class="txtLeft"></td>
+					</tr>
+					<tr class="end">
+						<td>47</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">[팝업] 사유</td>
+						<td class="txtLeft">mypage</td>
+						<td class="txtLeft">RatePlanManaPopup2</td>
+						<td><a href="/rate-mana-popup2" target="_blank">View</a></td>
+						<td class="end">완료</td>
+						<td>오진석</td>
+						<td></td>
+						<td class="txtLeft"></td>
+					</tr>
+					<tr class="end">
+						<td>48</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">[팝업] 완료</td>
+						<td class="txtLeft">mypage</td>
+						<td class="txtLeft">RatePlanManaPopup3</td>
+						<td><a href="/rate-mana-popup3" target="_blank">View</a></td>
+						<td class="end">완료</td>
+						<td>오진석</td>
+						<td></td>
+						<td class="txtLeft"></td>
+					</tr>
+					<tr class="end">
+						<td>49</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">결제내역</td>
+						<td class="txtLeft">리스트</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">mypage</td>
+						<td class="txtLeft">PaymentDetail</td>
+						<td><a href="/mypage/payment" target="_blank">View</a></td>
+						<td class="end">완료</td>
+						<td>엄정훈</td>
+						<td></td>
+						<td class="txtLeft"></td>
+					</tr>
+					<tr class="end">
+						<td>50</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">[팝업] 결제상세정보</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">mypage</td>
+						<td class="txtLeft">PaymentDetailPopup1</td>
+						<td><a href="/payment-detail-popup1" target="_blank">View</a></td>
+						<td class="end">완료</td>
+						<td>오진석</td>
+						<td></td>
+						<td class="txtLeft"></td>
+					</tr>
+					<tr class="end">
+						<td>51</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">[팝업] 결제취소완료</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">mypage</td>
+						<td class="txtLeft">PaymentDetailPopup2</td>
+						<td><a href="/payment-detail-popup2" target="_blank">View</a></td>
+						<td class="end">완료</td>
+						<td>오진석</td>
+						<td></td>
+						<td class="txtLeft"></td>
+					</tr>
+					<tr class="end">
+						<td>52</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">[팝업] 결제취소완료Pc취소요청대기</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">mypage</td>
+						<td class="txtLeft">PaymentDetailPopup3</td>
+						<td><a href="/payment-detail-popup3" target="_blank">View</a></td>
+						<td class="end">완료</td>
+						<td>오진석</td>
+						<td></td>
+						<td class="txtLeft"></td>
+					</tr>
+					<tr class="end">
+						<td>53</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">크레딧내역</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">mypage</td>
+						<td class="txtLeft">Credit</td>
+						<td><a href="/mypage/credit" target="_blank">View</a></td>
+						<td class="end">완료</td>
+						<td>엄정훈</td>
+						<td></td>
+						<td class="txtLeft"></td>
+					</tr>
+					<tr class="end">
+						<td>54</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">서비스 사용내역</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">mypage</td>
+						<td class="txtLeft">ServiceUsage</td>
+						<td><a href="/mypage/service-usage" target="_blank">View</a></td>
+						<td class="end">완료</td>
+						<td>박예림</td>
+						<td></td>
+						<td class="txtLeft"></td>
+					</tr>
+					<tr class="end">
+						<td>55</td>
+						<td class="txtLeft">퀵스타트</td>
+						<td class="txtLeft">무료 시작하기</td>
+						<td class="txtLeft">step1</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">auth</td>
+						<td class="txtLeft">QuickStartStep1</td>
+						<td><a href="/quick-start-step1" target="_blank">View</a></td>
+						<td class="">완료</td>
+						<td>정진호</td>
+						<td>2023.10.24</td>
+						<td class="txtLeft">오더일자 : 2023.10.23</td>
+					</tr>
+					<tr class="end">
+						<td>56</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">step2</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">auth</td>
+						<td class="txtLeft">QuickStartStep2</td>
+						<td><a href="/quick-start-step2" target="_blank">View</a></td>
+						<td class="">완료</td>
+						<td>정진호</td>
+						<td>2023.10.24</td>
+						<td class="txtLeft"></td>
+					</tr>
+					<tr class="end">
+						<td>57</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">step3</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">auth</td>
+						<td class="txtLeft">QuickStartStep3</td>
+						<td><a href="/quick-start-step3" target="_blank">View</a></td>
+						<td class="">완료</td>
+						<td>정진호</td>
+						<td>2023.10.24</td>
+						<td class="txtLeft"></td>
+					</tr>
+					<tr class="end">
+						<td>58</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">무료체험하기</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">auth</td>
+						<td class="txtLeft">QuickStartMember</td>
+						<td><a href="/quick-start-member" target="_blank">View</a></td>
+						<td class="">완료</td>
+						<td>엄정훈</td>
+						<td>2023.10.31</td>
+						<td class="txtLeft"></td>
+					</tr>
+					<tr class="end">
+						<td>59</td>
+						<td class="txtLeft">손비서</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">auth</td>
+						<td class="txtLeft">AiService</td>
+						<td><a href="/ai-service" target="_blank">View</a></td>
+						<td class="">완료</td>
+						<td>김혜진</td>
+						<td>2023.10.26</td>
+						<td class="txtLeft">오더일자 : 2023.10.23</td>
+					</tr>
+					<tr class="end">
+						<td>60</td>
+						<td class="txtLeft">퀵스타트</td>
+						<td class="txtLeft">[팝업] 무료체험하기</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">QuickStartPopup1</td>
+						<td><a href="/quick-start-popup1" target="_blank">View</a></td>
+						<td class="">완료</td>
+						<td>엄정훈</td>
+						<td>2023.10.31</td>
+						<td class="txtLeft">오더일자 : 2023.10.30</td>
+					</tr>
+					<tr class="end">
+						<td>61</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">[팝업] 사업자등록번호 등록</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">mypage</td>
+						<td class="txtLeft">QuickStartMypagePopup1</td>
+						<td><a href="/quick-start-mypage-popup1" target="_blank">View</a></td>
+						<td class="">완료</td>
+						<td>엄정훈</td>
+						<td>2023.10.31</td>
+						<td class="txtLeft">오더일자 : 2023.10.30</td>
+					</tr>
+					<tr class="end">
+						<td>62</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">[팝업] 둘러보기 영상</td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft"></td>
+						<td class="txtLeft">auth</td>
+						<td class="txtLeft">CorporatePopup8</td>
+						<td><a href="/corporate-popup8" target="_blank">View</a></td>
+						<td class="end">완료</td>
+						<td>정진호</td>
+						<td>2023.10.31</td>
+						<td class="txtLeft"></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<script>
+		$('table tbody tr td a').on('click', function(){
+			if(!$(this).parent().parent().hasClass('end') && !$(this).parent().parent().hasClass('ing') && !$(this).parent().parent().hasClass('guide')){
+				return false;
+			}
+		});
+		$('.box').on('click', function () {
+			if ($(this).hasClass('on')) {
+				$(this).removeClass('on').children('.atten').css({ height: '' });
+			} else {
+				$(this).addClass('on').children('.atten').css({ height: 'auto' });
+			}
+		});
+	</script>
+</body>
+
+</html>

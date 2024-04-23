@@ -1,0 +1,201 @@
+button {
+  border: none;
+  outline: none;
+}
+.btn-wrap {
+  button:disabled {
+    background-color: $bgColor-5;
+    color: $color-4;
+    border: 1px solid $bdColor-9;
+  }
+}
+
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 24px 0;
+  border-radius: 8px;
+  &.brown {
+    background-color: $bgColor-8;
+    color: $color-5;
+  }
+  &.orange {
+    background-color: $bgColor-7;
+    color: $color-5;
+  }
+  &.bd-brown {
+    // width: 200px;
+    // padding: 19px 24px 18px;
+    border: 1px solid $bdColor-2;
+    background-color: $bgColor-12;
+    letter-spacing: -0.4px;
+    color: $color-7;
+  }
+  &.modi-black {
+    color: $color-1;
+    background-color: $bgColor-12;
+    border: 1px solid $bdColor-6;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: -0.5px;
+    color: #222;
+  }
+  &.modi-brown {
+    color: $color-5;
+    background-color: $bgColor-8;
+    border: 1px solid $bdColor-2;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: -0.5px;
+  }
+
+  // Size
+  &.btn-small {
+    max-width: 39.38%;
+  }
+}
+
+button.button:disabled {
+  background-color: $bgColor-10;
+  border: $bdColor-8;
+  color: $color-4;
+}
+
+// 박스 레이어 안에 버튼일 경우
+.box-layer {
+  .button {
+    padding: 19px 0;
+  }
+}
+
+.checkbutton {
+  border-radius: 8px;
+  white-space: nowrap;
+  &.bd-brown {
+    padding: 18px 11px;
+    width: 120px;
+    border: 1px solid $bdColor-2;
+    background-color: $bgColor-12;
+    letter-spacing: -0.4px;
+    color: $color-7;
+  }
+  &.brown {
+    padding: 18px;
+    border: 1px solid $bdColor-2;
+    background-color: $bgColor-8;
+    letter-spacing: -0.4px;
+    color: $color-5;
+    width: 120px;
+  }
+  &.bd-black {
+    padding: 15px 24px 14px;
+    border: solid 1px $bdColor-6;
+    background-color: $bgColor-12;
+    color: $color-1;
+  }
+
+  &.fixed {
+    flex-basis: 120px;
+    flex-shrink: 0;
+  }
+}
+.button-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 90px;
+}
+
+button.checkbutton:disabled {
+  background-color: $bgColor-10;
+  color: $color-4;
+  border: 1px solid $bdColor-8;
+}
+
+.button + .button {
+  margin-left: 12px;
+}
+
+.divided-wrap {
+  display: flex;
+  flex-wrap: nowrap;
+  .overlap {
+    margin-left: 10px;
+    white-space:nowrap
+  }
+}
+
+.field-form {
+  &.address {
+    input:read-only {
+      background-color: $bgColor-10;
+      color: $color-4;
+      border-color: $bdColor-3;
+    }
+    input.text:read-only {
+      background: transparent;
+      color: $color-1;
+    }
+  }
+}
+
+.scroll-container{
+  position: fixed;
+  right: 32px;
+  bottom: 5%;
+  z-index: 10;
+  .scroll-top-button {
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    border-radius: 50%;
+    z-index: 1;
+    box-shadow: 0 4px 20px 0 rgba(131, 96, 75, 0.3);
+    background-color: $bgColor-12;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    line-height: 1.25;
+    color: $color-7;
+  }
+  .popup-btn {
+    width: 80px;
+    padding: 12px;
+    border-radius: 40px 40px 16px 16px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 20px 0 rgba(247, 94, 35, 0.45);
+    background-image: linear-gradient(to bottom, #f75c23, #ed7c1b);
+    transition: all .2s linear;
+    .icon {
+      display: block;
+      width:56px;
+      height:56px;
+      font-size:12px;
+      border-radius: 50%;
+      margin-bottom:10px;
+      background: #fff url('/public/assets/images/home-img/play-icon.png') no-repeat center center / 15px 18px;
+    }
+    .text {
+      opacity: 1;
+      visibility: visible;
+      color:#fff;
+      line-height: 1.3;
+    }
+    &.close-btn {
+      height: 80px;
+      border-radius: 50%;
+      .icon {
+        background: transparent url('/public/assets/images/home-img/close-icon.png') no-repeat center center / 24px 24px;
+      }
+      .text {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+  }
+}

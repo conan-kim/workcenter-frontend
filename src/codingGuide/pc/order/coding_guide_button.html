@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<title>LG EP 프로젝트 PC coding guide</title>
+	<link rel="stylesheet" href="../../../css/fonts.css" type="text/css"/>
+	<link rel="stylesheet" href="../../../css/reset.css" type="text/css"/>
+	<link rel="stylesheet" href="../../../css/pc/em/layout.css" type="text/css"/>
+	<link rel="stylesheet" href="../../../css/pc/em/com_em.css" type="text/css"/>
+	<link rel="stylesheet" href="../../../css/pc/em/form.css" type="text/css"/>
+	<!-- js -->
+	<script type="text/javascript" src="../../../js/lib/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="../../../js/pc/com_em.js"></script>
+	<!-- Plug in 가이드 -->
+    <link rel="stylesheet" href="../../docs/guide.css">
+    <link rel="stylesheet" href="../../docs/prism.css">
+    <script type="text/javascript" src="../../docs/prism.js"></script>
+</head>
+<body>
+<div class="wrap">
+	<div class="guide_header"><em>LG EP</em> 프로젝트 PC coding guide
+		<h1><img src="../../images/logo.png" alt="로고"></h1>
+	</div>
+
+	<div class="cont_codGuide guide_container">
+		<div class="coding_type">
+			<div>
+				<a href="../../mobile/index_mo.html" title="mobile" class="btn_type">Mobile</a>
+				<a href="../../list_page.html" title="coding list">LIST PAGE</a>
+			</div>
+		</div>
+
+		<div class="tab">
+			<a href="coding_guide_layout.html" title="BOX">Layout</a>
+			<a href="coding_guide_box.html" title="BOX">Box</a>
+			<a href="javascript:void(0);" title="BUTTON" class="active">Button</a>
+			<a href="coding_guide_form.html" title="FORM">Form</a>
+			<a href="coding_guide_font.html" title="FONT">Font</a>
+			<a href="coding_guide_color.html" title="COLOR">Color</a>
+			<a href="coding_guide_table.html" title="TABLE">Table</a>
+			<a href="coding_guide_tooltip.html" title="TOOLTIP">Tooltip</a>
+		</div>
+
+		<div class="contents_infor">
+
+			<h2 class="title">BUTTON TYPE</h2>
+			<div class="conIn_tip">
+			</div>
+			<ul style="display:flex;">
+				<li style="width:100%">
+					<h3>Default & hover</h3>
+					<a href="javascript:void(0)" class="btn btn_l btn_pink">확인</a>
+				</li>
+				<li style="width:100%">
+					<h3>Disabled</h3>
+					<a href="javascript:void(0)" class="btn btn_l">확인</a>
+				</li>
+				<li style="width:100%">
+					<h3>Default & hover</h3>
+					<a href="javascript:void(0)" class="btn btn_l btn_gray">초기화</a>
+				</li>
+				<li style="width:100%">
+					<h3>Disabled</h3>
+					<a href="javascript:void(0)" class="btn btn_l btn_gray disabled">초기화</a>
+				</li>
+				<li style="width:100%">
+					<h3>Box plus</h3>
+					<a href="javascript:void(0)" class="btn btn_m btn_line_pink">추가 주문<span class="plus"></span></a>
+				</li>
+			</ul>
+<!-- 코드 삽입 -->
+<pre class="language-html"><code>&lt;!-- BUTTON TYPE -->
+&lt;a href="javascript:void(0)" class="btn btn_l btn_pink">확인&lt;/a> &lt;!-- 기본 버튼 -->
+&lt;a href="javascript:void(0)" class="btn btn_l">확인&lt;/a> &lt;!-- 기본 버튼 비활성화 -->
+&lt;a href="javascript:void(0)" class="btn btn_l btn_gray">초기화&lt;/a> &lt;!-- 기본 버튼 -->
+&lt;a href="javascript:void(0)" class="btn btn_l btn_gray disabled">초기화&lt;/a> &lt;!-- 기본 버튼 비활성화 -->
+&lt;a href="javascript:void(0)" class="btn btn_m btn_line_pink">추가 주문&lt;span class="plus">&lt;/span>&lt;/a> &lt;!-- 기본 버튼 내 플러스 아이콘 -->
+</code></pre>
+<!-- 코드 삽입 -->
+
+			<h2 class="title">BUTTON Round</h2>
+			<div class="conIn_tip">
+			</div>
+			<ul style="display:flex;">
+				<li style="width:100%">
+					<h3>이전버튼</h3>
+					<a href="javascript:void(0)" class="btn btn_r btn_prev"><span class="ico"></span>이전</a>
+				</li>
+				<li style="width:100%">
+					<h3>다음버튼</h3>
+					<a href="javascript:void(0)" class="btn btn_r btn_next">다음<span class="ico"></span></a>
+				</li>
+				<li style="width:100%">
+					<h3>다음버튼 (Disabled)</h3>
+					<a href="javascript:void(0)" class="btn btn_r btn_next disabled">다음<span class="ico"></span></a>
+				</li>
+				<li style="width:100%">
+					<h3>주문 추가</h3>
+					<a href="javascript:void(0)" class="btn btn_r btn_plus">주문 추가<span class="ico"></span></a>
+				</li>
+				<li style="width:100%">
+					<h3>주문 취소</h3>
+					<a href="javascript:void(0)" class="btn btn_r btn_clear">주문 취소<span class="ico"></span></a>
+				</li>
+			</ul>
+<!-- 코드 삽입 -->
+<pre class="language-html"><code>&lt;!-- BUTTON ROUND TYPE -->
+&lt;a href="javascript:void(0)" class="btn btn_r btn_prev">&lt;span class="ico">&lt;/span>이전&lt;/a> &lt;!-- 라운드 이전 버튼 -->
+&lt;a href="javascript:void(0)" class="btn btn_r btn_next">다음&lt;span class="ico">&lt;/span>&lt;/a> &lt;!-- 라운드 다음 버튼 -->
+&lt;a href="javascript:void(0)" class="btn btn_r btn_next disabled">다음&lt;span class="ico">&lt;/span>&lt;/a> &lt;!-- 라운드 다음 버튼 비활성화 -->
+&lt;a href="javascript:void(0)" class="btn btn_r btn_plus">주문 추가&lt;span class="ico">&lt;/span>&lt;/a> &lt;!-- 라운드 + 버튼 -->
+&lt;a href="javascript:void(0)" class="btn btn_r btn_clear">주문 취소&lt;span class="ico">&lt;/span>&lt;/a> &lt;!-- 라운드 클리어 버튼 -->
+</code></pre>
+<!-- 코드 삽입 -->
+
+			<h2 class="title">BUTTON ETC</h2>
+			<div class="conIn_tip">
+			</div>
+			<ul style="display:flex;">
+				<li style="width:100%">
+					<h3>Text Plus</h3>
+					<a href="javascript:void(0)" class="btn t_box c_pink">주문 제품 추가<span class="plus"></span></a>
+				</li>
+				<li style="width:100%">
+					<h3>Box shadow</h3>
+					<a href="javascript:void(0)" class="btn shadow_box">연락처 전체보기 (15)</a>
+					<h3>Box shadow (Disabled)</h3>
+					<a href="javascript:void(0)" class="btn shadow_box disabled">연락처 전체보기</a>
+				</li>
+				<li style="width:100%">
+					<h3>특화고정 Default & hover</h3>
+					<a href="javascript:void(0)" class="btn in_btn">Lot 선택</a>
+					<h3>Default & hover</h3>
+					<a href="javascript:void(0)" class="btn in_btn">텍스트가 길어 질 경우</a>
+				</li>
+				<li style="width:100%">
+					<h3>리스트 버튼</h3>
+					<a href="javascript:void(0)" class="btn btn_list">주문 요청</a>
+				</li>
+				<li style="width:100%">
+					<h3>기능있는 버튼</h3>
+					<a href="javascript:void(0)" class="btn btn_etc_line">배송등록</a>
+					<h3>첨부이미지</h3>
+					<a href="javascript:void(0)" class="btn btn_file_del">전사서명.png<span class="ico"></span></a>
+				</li>
+				<li style="width:100%">
+					<h3>카운트 박스 (기본)</h3>
+					<span class="count_tag">+5</span>
+					<span class="count_tag btn_line_black">+5</span>
+					<h3>카운트 박스 (선택)</h3>
+					<span class="count_tag btn_line_green">+5</span>
+					<h3>카운트 박스 (Disabled)</h3>
+					<span class="count_tag disabled">+5</span>
+				</li>
+			</ul>
+<!-- 코드 삽입 -->
+<pre class="language-html"><code>&lt;!-- BUTTON ETC -->
+&lt;a href="javascript:void(0)" class="btn t_box c_pink">주문 제품 추가&lt;span class="plus">&lt;/span>&lt;/a> &lt;!-- 추가 버튼 -->
+&lt;a href="javascript:void(0)" class="btn shadow_box">연락처 전체보기 (15)&lt;/a> &lt;!-- 박스 쉐도우 버튼 -->
+&lt;a href="javascript:void(0)" class="btn shadow_box disabled">연락처 전체보기&lt;/a> &lt;!-- 박스 쉐도우 버튼 비활성화 -->
+&lt;a href="javascript:void(0)" class="btn in_btn">Lot 선택&lt;/a> &lt;!-- 라인 버튼 긍정 호버 기능 -->
+&lt;a href="javascript:void(0)" class="btn in_btn">텍스트가 길어 질 경우&lt;/a>  &lt;!-- 라인 버튼 긍정 호버 기능(텍스트 길어질 시) -->
+&lt;a href="javascript:void(0)" class="btn btn_list">주문 요청&lt;/a> &lt;!-- 리스트 내 버튼 -->
+&lt;a href="javascript:void(0)" class="btn btn_etc_line">배송등록&lt;/a> &lt;!-- 호버 기능 버튼 -->
+&lt;a href="javascript:void(0)" class="btn btn_file_del">전사서명.png&lt;span class="ico">&lt;/span>&lt;/a> &lt;!-- 파일명 및 삭제 버튼 -->
+&lt;span class="count_tag">+5&lt;/span> &lt;!-- 기본 그레이 -->
+&lt;span class="count_tag btn_line_black">+5&lt;/span> &lt;!-- 기본 블랙 -->
+&lt;span class="count_tag btn_line_green">+5&lt;/span> &lt;!-- 선택시 -->
+&lt;span class="count_tag disabled">+5&lt;/span> &lt;!-- 비활성화 시 -->
+</code></pre>
+<!-- 코드 삽입 -->
+
+
+		</div>
+	</div>
+
+
+</div>
+</body>
+</html>

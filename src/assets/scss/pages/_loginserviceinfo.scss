@@ -1,0 +1,173 @@
+.login-service-wrap{
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 80px 0 200px;
+  .login-service-top{
+    position: relative;
+    margin-bottom: 60px;
+    .login-service-tit{
+      font-weight: 400;
+      @include fontCustom(40px,null,56px,null);
+      strong{
+        font-size:40px;
+      }
+      margin-bottom: 23px;
+    }
+    .login-service-txt{
+      @include fontCustom(20px,null,32px,-0.5px);
+      color: $color-3;
+    }
+    .button-wrap{
+      padding: 0;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      .button{
+        width: 200px;
+      }
+    }
+  }
+  .login-service-middle{
+    background-color: $bgColor-3;
+    padding: 80px;
+    border-radius: 12px;
+    margin-bottom: 80px;
+    .login-service-list{
+      @include flex-center-start;
+      .login-service-item{
+        padding-top: 145px;
+        max-width: 360px;
+        margin-right: 80px;
+        position: relative;
+        &.ico-1,
+        &.ico-2,
+        &.ico-3{
+          &::before{
+            content: '';
+            display: block;
+            width: 108px;
+            height: 108px;
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+        }
+        &.ico-1{
+          &::before{
+            background: url('/assets/images/icons/ico-login-service1.png') no-repeat center center/cover;
+          }
+        }
+        &.ico-2{
+          &::before{
+            background: url('/assets/images/icons/ico-login-service2.png') no-repeat center center/cover;
+          }
+        }
+        &.ico-3{
+          &::before{
+            background: url('/assets/images/icons/ico-login-service3.png') no-repeat center center/cover;
+          }
+        }
+        &:last-child{
+          margin-right: 0;
+        }
+        .service-item-tit{
+          strong{
+            @include fontCustom(24px,null,56px,null);
+          }
+        }
+        .service-item-txt{
+          @include fontCustom(20px,null,28px,-0.5px);
+          color: $color-3;
+        }
+      }
+    }
+  }
+  .login-service-bottom{
+    position: relative;
+    .service-bottom-tit{
+      strong{
+        @include fontCustom(24px,null,56px,null);
+      }
+    }
+    .service-bottom-txt{
+      @include fontCustom(20px,null,32px,-0.5px);
+      color: $color-3;
+    }
+    .button-wrap{
+      position: absolute;
+      padding: 0;
+      top: 0;
+      right: 0;
+      .button{
+        width: 156px;
+        padding: 20px 0px;
+        @include fontCustom(16px,400,null,-0.5px);
+      }
+    }
+    .integrated-member-service{
+      margin-top: 40px;
+      .integrated-service-list{
+        @include flex-between-start;
+        flex-wrap: wrap;
+        .integrated-service-item{
+          width: 264px;
+          padding: 132px 0 40px 32px;
+          background-color: $bgColor-3;
+          border-radius: 12px;
+          position: relative;
+          em{
+            @include fontCustom($line-height:19px);
+            color: $color-6;
+          }
+          
+          strong{
+            display: block;
+            margin-top: 12px;
+            @include fontCustom($font-size:24px,$line-height:29px);
+          }
+          &.ico-1,
+          &.ico-2,
+          &.ico-3,
+          &.ico-4,
+          &.ico-5{
+            &::before{
+              content: '';
+              display: block;
+              width: 40px;
+              height: 40px;
+              position: absolute;
+              top: 32px;
+              left: 32px;
+            }
+          }
+          &.ico-1{
+            &::before{
+              background: url('/assets/images/icons/ico-integrated1.png') no-repeat center center/cover;
+            }
+          }
+          &.ico-2{
+            &::before{
+              background: url('/assets/images/icons/ico-integrated2.png') no-repeat center center/cover;
+            }
+          }
+          &.ico-3{
+            &::before{
+              background: url('/assets/images/icons/ico-integrated3.png') no-repeat center center/cover;
+            }
+          }
+          &.ico-4{
+            &::before{
+              background: url('/assets/images/icons/ico-integrated4.png') no-repeat center center/cover;
+            }
+          }
+          &.ico-5{
+            &::before{
+              background: url('/assets/images/icons/ico-integrated5.png') no-repeat center center/cover;
+            }
+          }
+        }
+      }
+    }
+    
+  }
+}

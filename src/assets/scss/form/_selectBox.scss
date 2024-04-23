@@ -1,0 +1,64 @@
+.select-box {
+  position: relative;
+  width: 100%;
+  .label {
+    width: 100%;
+    color: $color-1;
+    text-align: left;
+    background: $bgColor-12;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    border: 1px solid $bdColor-3;
+    padding: 20px 15px;
+    cursor: pointer;
+    &::after {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      top: 15px;
+      right: 12px;
+      width: 24px;
+      height: 24px;
+      background: url(@@/assets/images/icons/arrow-down.png) center no-repeat;
+    }
+  }
+  .option {
+    position: absolute;
+    // display: none;
+    left: 0;
+    top: 52px;
+    z-index: 10;
+    width: 100%;
+    // max-height: 196px;
+    overflow-y: auto;
+    background: $bgColor-12;
+    border-radius: 0 0 8px 8px;
+    -webkit-border-radius: 0 0 8px 8px;
+    -moz-border-radius: 0 0 8px 8px;
+    border: 1px solid $bdColor-3;
+    border-top: none;
+    .line {
+      margin: auto;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      border: 1px solid $bdColor-5;
+      width: 98%;
+      position: absolute;
+    }
+    li {
+      transition: all 0.3s;
+      color: $color-1;
+      display: block;
+      padding: 20px 14px;
+      overflow: hidden;
+      -o-text-overflow: ellipsis;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      &:hover {
+        background-color: $bgColor-4;
+      }
+    }
+  }
+}

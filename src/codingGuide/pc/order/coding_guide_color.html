@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<title>LG EP 프로젝트 PC coding guide</title>
+	<link rel="stylesheet" href="../../../css/fonts.css" type="text/css"/>
+	<link rel="stylesheet" href="../../../css/reset.css" type="text/css"/>
+	<link rel="stylesheet" href="../../../css/pc/em/layout.css" type="text/css"/>
+	<link rel="stylesheet" href="../../../css/pc/em/com_em.css" type="text/css"/>
+	<link rel="stylesheet" href="../../../css/pc/em/form.css" type="text/css"/>
+	<!-- js -->
+	<script type="text/javascript" src="../../../js/lib/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="../../../js/pc/com_em.js"></script>
+	<!-- Plug in 가이드 -->
+    <link rel="stylesheet" href="../../docs/guide.css">
+    <link rel="stylesheet" href="../../docs/prism.css">
+    <script type="text/javascript" src="../../docs/prism.js"></script>
+</head>
+<body>
+<div class="wrap">
+	<div class="guide_header"><em>LG EP</em> 프로젝트 PC coding guide
+		<h1><img src="../../images/logo.png" alt="로고"></h1>
+	</div>
+
+	<div class="cont_codGuide guide_container">
+		<div class="coding_type">
+			<div>
+				<a href="../../mobile/index_mo.html" title="mobile" class="btn_type">Mobile</a>
+				<a href="../../list_page.html" title="coding list">LIST PAGE</a>
+			</div>
+		</div>
+
+		<div class="tab">
+			<a href="coding_guide_layout.html" title="BOX">Layout</a>
+			<a href="coding_guide_box.html" title="BOX">Box</a>
+			<a href="coding_guide_button.html" title="BUTTON">Button</a>
+			<a href="coding_guide_form.html" title="FORM">Form</a>
+			<a href="coding_guide_font.html" title="FONT">Font</a>
+			<a href="javascript:void(0)" title="COLOR" class="active">Color</a>
+			<a href="coding_guide_table.html" title="TABLE">Table</a>
+			<a href="coding_guide_tooltip.html" title="TOOLTIP">Tooltip</a>
+		</div>
+
+		<div class="contents_infor">
+			<h2 class="title mt30">Text</h2>
+			<div class="conIn_tip"></div>
+            <ul style="display:flex;">
+                <li style="text-align:center">
+                    <span class="color_point" style="background-color:#282828;display:block;width:60px;height:60px;margin:auto;border-radius:100%;"></span>
+                    <strong style="display:block;margin-top:5px;font-size:14px;">타이틀/강조<br>완료페이지 기본</strong>
+                </li>
+                <li style="text-align:center;margin-left:30px;">
+                    <span class="color_point" style="background-color:#616366;display:block;width:60px;height:60px;margin:auto;border-radius:100%;"></span>
+                    <strong style="display:block;margin-top:5px;font-size:14px;">기본</strong>
+                </li>
+                <li style="text-align:center;margin-left:30px;">
+                    <span class="color_point" style="background-color:#959595;display:block;width:60px;height:60px;margin:auto;border-radius:100%;"></span>
+                    <strong style="display:block;margin-top:5px;font-size:14px;">기본</strong>
+                </li>
+                <li style="text-align:center;margin-left:100px;">
+                    <span class="color_point" style="background-color:#DB4A98;display:block;width:60px;height:60px;margin:auto;border-radius:100%;"></span>
+                    <strong style="display:block;margin-top:5px;font-size:14px;">타이틀 / 강조</strong>
+                </li>
+                <li style="text-align:center;margin-left:30px;">
+                    <span class="color_point" style="background-color:#29BF6A;display:block;width:60px;height:60px;margin:auto;border-radius:100%;"></span>
+                    <strong style="display:block;margin-top:5px;font-size:14px;">선택</strong>
+                </li>
+                <li style="text-align:center;margin-left:30px;">
+                    <span class="color_point" style="background-color:#FF3B30;display:block;width:60px;height:60px;margin:auto;border-radius:100%;"></span>
+                    <strong style="display:block;margin-top:5px;font-size:14px;">에러</strong>
+                </li>
+                <li style="text-align:center;margin-left:30px;">
+                    <span class="color_point" style="background-color:#1E82F1;display:block;width:60px;height:60px;margin:auto;border-radius:100%;"></span>
+                    <strong style="display:block;margin-top:5px;font-size:14px;">링크</strong>
+                </li>
+            </ul>
+<!-- 코드 삽입 -->
+<pre class="language-html"><code>&lt;!-- Text -->
+&lt;span class="c_black">#282828&lt;/span>  &lt;!-- 타이틀/강조/완료페이지 기본 -->
+&lt;span class="c_gray">#616366&lt;/span>  &lt;!-- 기본 -->
+&lt;span class="c_gray2">#959595&lt;/span>  &lt;!-- 기본 -->
+
+&lt;span class="c_pink">#DB4A98&lt;/span>  &lt;!-- 타이틀 / 강조 -->
+&lt;span class="c_green">#29BF6A&lt;/span>  &lt;!-- 선택 -->
+&lt;span class="c_red">#FF3B30&lt;/span>  &lt;!-- 에러 -->
+&lt;span class="c_neon_blue">#1E82F1&lt;/span>  &lt;!-- 링크 -->
+</code></pre>
+<!-- 코드 삽입 -->
+			<h2 class="title mt30">사업부 컬러</h2>
+			<div class="conIn_tip"></div>
+            <ul style="display:flex;">
+                <li style="text-align:center">
+                    <span class="color_point" style="background-color:#1A74BB;display:block;width:60px;height:60px;margin:auto;border-radius:100%;"></span>
+                    <strong style="display:block;margin-top:5px;font-size:14px;">NCC<br>bg/color 두종류</strong>
+                </li>
+                <li style="text-align:center;margin-left:30px;">
+                    <span class="color_point" style="background-color:#503381;display:block;width:60px;height:60px;margin:auto;border-radius:100%;"></span>
+                    <strong style="display:block;margin-top:5px;font-size:14px;">PO<br>bg/color 두종류</strong>
+                </li>
+                <li style="text-align:center;margin-left:30px;">
+                    <span class="color_point" style="background-color:#E22485;display:block;width:60px;height:60px;margin:auto;border-radius:100%;"></span>
+                    <strong style="display:block;margin-top:5px;font-size:14px;">PVC/가소제<br>bg/color 두종류</strong>
+                </li>
+                <li style="text-align:center;margin-left:30px;">
+                    <span class="color_point" style="background-color:#E8416A;display:block;width:60px;height:60px;margin:auto;border-radius:100%;"></span>
+                    <strong style="display:block;margin-top:5px;font-size:14px;">ABS<br>bg/color 두종류</strong>
+                </li>
+                <li style="text-align:center;margin-left:30px;">
+                    <span class="color_point" style="background-color:#F77E17;display:block;width:60px;height:60px;margin:auto;border-radius:100%;"></span>
+                    <strong style="display:block;margin-top:5px;font-size:14px;">아크릴/SAP<br>bg/color 두종류</strong>
+                </li>
+                <li style="text-align:center;margin-left:30px;">
+                    <span class="color_point" style="background-color:#2DB1A7;display:block;width:60px;height:60px;margin:auto;border-radius:100%;"></span>
+                    <strong style="display:block;margin-top:5px;font-size:14px;">HPM<br>bg/color 두종류</strong>
+                </li>
+                <li style="text-align:center;margin-left:30px;">
+                    <span class="color_point" style="background-color:#21AEF0;display:block;width:60px;height:60px;margin:auto;border-radius:100%;"></span>
+                    <strong style="display:block;margin-top:5px;font-size:14px;">CNT<br>bg/color 두종류</strong>
+                </li>
+            </ul>
+<!-- 코드 삽입 -->
+<pre class="language-html"><code>&lt;!-- Bg -->
+&lt;span class="bg_blue">#1A74BB&lt;/span>  &lt;!-- NCC 사업부 -->
+&lt;span class="bg_puple">#503381&lt;/span>  &lt;!-- PO 사업부 -->
+&lt;span class="bg_deep_pink">#E22485&lt;/span>  &lt;!-- PVC/가소제 사업부 -->
+&lt;span class="bg_tomato">#E8416A&lt;/span>  &lt;!-- ABS 사업부 -->
+&lt;span class="bg_orange">#F77E17&lt;/span>  &lt;!-- 아크릴/SAP 사업부 -->
+&lt;span class="bg_mint">#2DB1A7&lt;/span>  &lt;!-- HPM 사업부 -->
+&lt;span class="bg_sky_blue">#21AEF0&lt;/span>  &lt;!-- CNT 사업부 -->
+
+&lt;!-- Color -->
+&lt;span class="c_blue">#1A74BB&lt;/span>  &lt;!-- NCC 사업부 -->
+&lt;span class="c_puple">#503381&lt;/span>  &lt;!-- PO 사업부 -->
+&lt;span class="c_deep_pink">#E22485&lt;/span>  &lt;!-- PVC/가소제 사업부 -->
+&lt;span class="c_tomato">#E8416A&lt;/span>  &lt;!-- ABS 사업부 -->
+&lt;span class="c_orange">#F77E17&lt;/span>  &lt;!-- 아크릴/SAP 사업부 -->
+&lt;span class="c_mint">#2DB1A7&lt;/span>  &lt;!-- HPM 사업부 -->
+&lt;span class="c_sky_blue">#21AEF0&lt;/span>  &lt;!-- CNT 사업부 -->
+</code></pre>
+<!-- 코드 삽입 -->
+		</div>
+	</div>
+
+
+</div>
+</body>
+</html>

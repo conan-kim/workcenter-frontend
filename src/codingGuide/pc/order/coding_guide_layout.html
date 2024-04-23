@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<title>LG EP 프로젝트 PC coding guide</title>
+	<!-- css -->
+	<link rel="stylesheet" href="../../../css/fonts.css" type="text/css"/>
+	<link rel="stylesheet" href="../../../css/reset.css" type="text/css"/>
+	<link rel="stylesheet" href="../../../css/pc/em/layout.css" type="text/css"/>
+	<link rel="stylesheet" href="../../../css/pc/em/com_em.css" type="text/css"/>
+	<link rel="stylesheet" href="../../../css/pc/em/form.css" type="text/css"/>
+	<!-- js -->
+	<script type="text/javascript" src="../../../js/lib/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="../../../js/pc/com_em.js"></script>
+	<!-- Plug in -->
+	<link rel="stylesheet" href="../../../js/plugins/mCustomScrollbar/jquery.mCustomScrollbar.css">
+	<script src="../../../js/plugins/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+	<!-- Plug in 가이드 -->
+    <link rel="stylesheet" href="../../docs/guide.css">
+    <link rel="stylesheet" href="../../docs/prism.css">
+    <script type="text/javascript" src="../../docs/prism.js"></script>
+</head>
+<body>
+<div class="wrap">
+	<div class="guide_header"><em>LG EP</em> 프로젝트 PC coding guide
+		<h1><img src="../../images/logo.png" alt="로고"></h1>
+	</div>
+
+	<div class="cont_codGuide guide_container">
+		<div class="coding_type">
+			<div>
+				<a href="../../mobile/index_mo.html" title="mobile" class="btn_type">Mobile</a>
+				<a href="../../list_page.html" title="coding list">LIST PAGE</a>
+			</div>
+		</div>
+
+		<div class="tab">
+			<a href="javascript:void(0);" title="BOX" class="active">Layout</a>
+			<a href="coding_guide_box.html" title="BOX">Box</a>
+			<a href="coding_guide_button.html" title="BUTTON">Button</a>
+			<a href="coding_guide_form.html" title="FORM">Form</a>
+			<a href="coding_guide_font.html" title="FONT">Font</a>
+			<a href="coding_guide_color.html" title="COLOR">Color</a>
+			<a href="coding_guide_table.html" title="TABLE">Table</a>
+			<a href="coding_guide_tooltip.html" title="TOOLTIP">Tooltip</a>
+		</div>
+
+		<div class="contents_infor">
+
+			<h2 class="title">Page Layout View</h2>
+			<div class="conIn_tip">
+                <a href="../../../html/pc/layout_member_cont.html" class="link" target="_blank">사업부 - Layout view</a>
+                <a href="../../../html/pc/layout_member.html" class="link" target="_blank">사업부 - Member Layout view</a>
+                <br>
+                <a href="../../../html/pc/layout_ep.html" class="link" target="_blank">MyChemOn - Layout view</a>
+                <br>
+                <a href="../../../html/pc/em/layout_em.html" class="link" target="_blank">EM - Layout view</a>
+                <a href="../../../html/pc/em/layout_em_slider.html" class="link" target="_blank">EM - Layout view - slider Type01</a>
+                <a href="../../../html/pc/em/layout_em_slider2.html" class="link" target="_blank">EM - Layout view - slider Type02</a>
+                <a href="../../../html/pc/em/layout_em_bar.html" class="link" target="_blank">EM - location 대체 Bar</a>
+			</div>
+			<br>
+
+			<h2 class="title">Popup View</h2>
+			<div class="conIn_tip">
+                <a href="#alertPopId" class="link pop_open">Alert Popup view</a>
+                <a href="#pageMdId" class="link pop_open">중팝업 view</a>
+                <a href="#pageId" class="link pop_open">대팝업 view</a>
+                <a href="#pageBigId" class="link pop_open">Big 대팝업 view</a>
+			</div>
+		</div>
+	</div>
+
+	<!-- Big Popup -->
+	<div class="pop_wrap pop_big" id="pageBigId">
+		<div class="pop_layer">
+			<!-- header -->
+			<div class="pop_header">
+				<h1>팝업 타이틀</h1>
+				<a href="javascript:void(00" class="js_close btn_pop_close">닫기</a>
+			</div>
+			<!--// header -->
+
+			<!-- content -->
+			<div class="pop_content mCustomScrollbar">
+				팝업내용 들어갈 곳<br>
+				팝업내용 들어갈 곳<br>
+				팝업내용 들어갈 곳<br>
+				팝업내용 들어갈 곳<br>
+				팝업내용 들어갈 곳<br>
+				팝업내용 들어갈 곳<br>
+				팝업내용 들어갈 곳<br>
+				팝업내용 들어갈 곳<br>
+				팝업내용 들어갈 곳<br>
+				팝업내용 들어갈 곳<br>
+				팝업내용 들어갈 곳<br>
+			</div>
+			<!--// content -->
+
+			<!-- btn -->
+			<div class="btn_pop_wrap">
+				<a href="javascript:void(0)" class="btn btn_l btn_gray">취소</a>
+				<a href="javascript:void(0)" class="btn btn_l btn_pink js_close">입력하기</a>
+			</div>
+			<!--// btn -->
+		</div>
+	</div>
+	<!--// Big Popup -->
+
+
+
+	<!-- Popup -->
+	<div class="pop_wrap" id="pageId">
+		<div class="pop_layer">
+			<!-- header -->
+			<div class="pop_header">
+				<h1>팝업 타이틀</h1>
+				<a href="javascript:void(00" class="js_close btn_pop_close">닫기</a>
+			</div>
+			<!--// header -->
+
+			<!-- content -->
+			<div class="pop_content mCustomScrollbar">
+				팝업내용 들어갈 곳<br>
+				팝업내용 들어갈 곳<br>
+				팝업내용 들어갈 곳<br>
+				팝업내용 들어갈 곳<br>
+				팝업내용 들어갈 곳<br>
+				팝업내용 들어갈 곳<br>
+				팝업내용 들어갈 곳<br>
+				팝업내용 들어갈 곳<br>
+				팝업내용 들어갈 곳<br>
+				팝업내용 들어갈 곳<br>
+				팝업내용 들어갈 곳<br>
+			</div>
+			<!--// content -->
+
+			<!-- btn -->
+			<div class="btn_pop_wrap">
+				<a href="javascript:void(0)" class="btn btn_l btn_gray">취소</a>
+				<a href="javascript:void(0)" class="btn btn_l btn_pink js_close">입력하기</a>
+			</div>
+			<!--// btn -->
+		</div>
+	</div>
+	<!--// Popup -->
+
+
+
+	<!-- Middle Popup -->
+	<div class="pop_wrap pop_middle pop_open" id="pageMdId">
+		<div class="pop_layer">
+			<!-- header -->
+			<div class="pop_header">
+				<h1>팝업 타이틀</h1>
+				<a href="javascript:void(0)" class="js_close btn_pop_close">닫기</a>
+			</div>
+			<!--// header -->
+
+			<!-- content -->
+			<div class="pop_content bg_white mCustomScrollbar">
+				팝업내용 들어갈 곳<br>
+				팝업내용 들어갈 곳<br>
+				팝업내용 들어갈 곳<br>
+				팝업내용 들어갈 곳<br>
+				팝업내용 들어갈 곳<br>
+				팝업내용 들어갈 곳<br>
+				팝업내용 들어갈 곳<br>
+				팝업내용 들어갈 곳<br>
+				팝업내용 들어갈 곳<br>
+				팝업내용 들어갈 곳<br>
+				팝업내용 들어갈 곳<br>
+			</div>
+			<!--// content -->
+
+			<!-- btn -->
+			<div class="btn_pop_wrap">
+				<a href="javascript:void(0)" class="btn btn_l btn_gray">취소</a>
+				<a href="javascript:void(0)" class="btn btn_l btn_pink js_close">입력하기</a>
+			</div>
+			<!--// btn -->
+		</div>
+	</div>
+	<!--// Middle Popup -->
+
+
+	<!-- alert Popup -->
+	<div class="pop_wrap pop_alert" id="alertPopId">
+		<div class="pop_layer">
+
+			<!-- content -->
+			<div class="pop_content">
+				선택한 북마크를 <br>삭제하시겠습니까?
+			</div>
+			<!--// content -->
+
+			<!-- btn -->
+			<div class="btn_pop_wrap">
+				<a href="javascript:void(0)" class="btn btn_l btn_gray">취소</a>
+				<a href="javascript:void(0)" class="btn btn_l btn_pink js_close">입력하기</a>
+			</div>
+			<!--// btn -->
+		</div>
+	</div>
+	<!--// alert Popup -->
+
+</div>
+</body>
+</html>

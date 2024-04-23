@@ -1,0 +1,28 @@
+.content {
+  &.dol-form {
+    padding: 32px 0;
+
+    .field-form {
+      & + .field-form {
+        margin-top: 32px;
+      }
+    }
+
+    & + .button-wrap {
+      padding-top: 0;
+    }
+  }
+}
+
+.contents-wrap {
+  &.dormant {
+    .box-wrap {
+      .box-top {
+        margin-bottom: auto;
+      }
+    }
+    .button-wrap {
+      padding-top: 60px;
+    }
+  }
+}

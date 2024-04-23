@@ -1,0 +1,2213 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<title>LG EP 프로젝트 PC coding guide</title>
+	<link rel="stylesheet" href="../../../css/fonts.css" type="text/css"/>
+	<link rel="stylesheet" href="../../../css/reset.css" type="text/css"/>
+	<link rel="stylesheet" href="../../../css/pc/em/layout.css" type="text/css"/>
+	<link rel="stylesheet" href="../../../css/pc/em/com_em.css" type="text/css"/>
+	<link rel="stylesheet" href="../../../css/pc/em/form.css" type="text/css"/>
+	<!-- js -->
+	<script type="text/javascript" src="../../../js/lib/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="../../../js/pc/com_em.js"></script>
+	<!-- Plug in 가이드 -->
+    <link rel="stylesheet" href="../../docs/guide.css">
+    <link rel="stylesheet" href="../../docs/prism.css">
+    <script type="text/javascript" src="../../docs/prism.js"></script>
+	<!-- plugins -->
+	<link rel="stylesheet" href="../../../js/plugins/mCustomScrollbar/jquery.mCustomScrollbar.css">
+	<script src="../../../js/plugins/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+</head>
+<body>
+<div class="wrap">
+	<div class="guide_header"><em>LG EP</em> 프로젝트 PC coding guide
+		<h1><img src="../../images/logo.png" alt="로고"></h1>
+	</div>
+
+	<div class="cont_codGuide guide_container">
+		<div class="coding_type">
+			<div>
+				<a href="../../mobile/index_mo.html" title="mobile" class="btn_type">Mobile</a>
+				<a href="../../list_page.html" title="coding list">LIST PAGE</a>
+			</div>
+		</div>
+
+		<div class="tab">
+			<a href="coding_guide_layout.html" title="BOX">Layout</a>
+			<a href="coding_guide_box.html" title="BOX">Box</a>
+			<a href="coding_guide_button.html" title="BUTTON">Button</a>
+			<a href="coding_guide_form.html" title="FORM">Form</a>
+			<a href="coding_guide_font.html" title="FONT">Font</a>
+			<a href="coding_guide_color.html" title="COLOR">Color</a>
+			<a href="javascript:void(0)" title="TABLE" class="active">Table</a>
+			<a href="coding_guide_tooltip.html" title="TOOLTIP">Tooltip</a>
+		</div>
+
+		<div class="contents_infor">
+			<h2 class="title mt30">기본 리스트 테이블</h2>
+			<div class="conIn_tip"></div>
+			<div style="padding:30px;background-color:#E9ECF2;">
+				<div class="tbl_list">
+					<table>
+						<caption>list</caption>
+						<colgroup>
+							<col style="width:15%" />
+							<col style="width:15%" />
+							<col style="width:13%" />
+							<col style="width:9%" />
+							<col style="width:12%" />
+							<col style="width:8%" />
+							<col style="width:8%" />
+							<col style="width:8%" />
+							<col style="width:12%" />
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="col">주문 요청 번호</th>
+								<th scope="col">제품명(제품코드)/수량</th>
+								<th scope="col">고객명</th>
+								<th scope="col">컬러코드</th>
+								<th scope="col">인도처</th>
+								<th scope="col">인도 조건</th>
+								<th scope="col">주문 요청일</th>
+								<th scope="col">도착 요청일</th>
+								<th scope="col">주문 상태</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<div>
+										<p>OR-210607-00002</p>
+									</div>
+								</td>
+								<td>
+									<div>
+										<p class="c_pink">A312B-94841-G / 3,000kg</p>
+										<span class="count_tag tooltip hover">+99
+											<div class="tooltip_pop top info_more">
+												<div class="cont mCustomScrollbar">
+													<ul>
+														<li class="on">
+															<span>214011234N</span>
+														</li>
+														<li>
+															<span>214011234N</span>
+														</li>
+														<li>
+															<span>214011234N</span>
+														</li>
+														<li>
+															<span>214011234N</span>
+														</li>
+														<li>
+															<span>214011234N</span>
+														</li>
+														<li>
+															<span>214011234N</span>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</span>
+									</div>
+								</td>
+								<td>
+									<div>
+										<p>SHANGHA WUXIN TRADE C</p>
+									</div>
+								</td>
+								<td>
+									<div>
+										<span class="c_code_ico">컬러코드</span>
+										<p>94841</p>
+										<span class="count_tag tooltip hover">+99
+											<div class="tooltip_pop top info_more">
+												<div class="cont mCustomScrollbar">
+													<ul>
+														<li class="on">
+															<span>214011234N</span>
+														</li>
+														<li>
+															<span>214011234N</span>
+														</li>
+														<li>
+															<span>214011234N</span>
+														</li>
+														<li>
+															<span>214011234N</span>
+														</li>
+														<li>
+															<span>214011234N</span>
+														</li>
+														<li>
+															<span>214011234N</span>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</span>
+									</div>
+								</td>
+								<td>
+									<div>
+										<p>SHANGHA WUXIN TRADE C</p>
+									</div>
+								</td>
+								<td>
+									<div>
+										<p>CIF</p>
+									</div>
+								</td>
+								<td>
+									<div>
+										<p>2021-05-21</p>
+									</div>
+								</td>
+								<td>
+									<div>
+										<p></p>
+									</div>
+								</td>
+								<td>
+									<div>
+										<p><a href="javascript:void(0)" class="btn btn_list">주문 요청</a></p>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div>
+										<p>OR-210607-00002</p>
+										<span class="od_tb_label blue">반품 주문</span>
+									</div>
+								</td>
+								<td>
+									<div>
+										<p class="c_pink">A312B-94841-G / 3,000kg</p>
+										<span class="count_tag tooltip hover">+99
+											<div class="tooltip_pop top info_more">
+												<div class="cont mCustomScrollbar">
+													<ul>
+														<li class="on">
+															<span>214011234N</span>
+														</li>
+														<li>
+															<span>214011234N</span>
+														</li>
+														<li>
+															<span>214011234N</span>
+														</li>
+														<li>
+															<span>214011234N</span>
+														</li>
+														<li>
+															<span>214011234N</span>
+														</li>
+														<li>
+															<span>214011234N</span>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</span>
+									</div>
+								</td>
+								<td>
+									<div>
+										<p>SHANGHA WUXIN TRADE C</p>
+									</div>
+								</td>
+								<td>
+									<div>
+										<span class="c_code_ico">컬러코드</span>
+										<p>94841</p>
+									</div>
+								</td>
+								<td>
+									<div>
+										<p>SHANGHA WUXIN TRADE C</p>
+									</div>
+								</td>
+								<td>
+									<div>
+										<p>고객 하차도</p>
+									</div>
+								</td>
+								<td>
+									<div>
+										<p>2021-05-21</p>
+									</div>
+								</td>
+								<td>
+									<div>
+										<p>2021-05-21</p>
+									</div>
+								</td>
+								<td>
+									<div>
+										<a href="javascript:void(0)" class="btn btn_list">주문 접수</a>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div>
+										<p>OR-210607-00002</p>
+										<span class="od_tb_label">조정 주문</span>
+									</div>
+								</td>
+								<td>
+									<div>
+										<p class="c_pink">A312B-94841-G / 3,000kg</p>
+										<span class="count_tag tooltip hover">+99
+											<div class="tooltip_pop top info_more">
+												<div class="cont mCustomScrollbar">
+													<ul>
+														<li class="on">
+															<span>214011234N</span>
+														</li>
+														<li>
+															<span>214011234N</span>
+														</li>
+														<li>
+															<span>214011234N</span>
+														</li>
+														<li>
+															<span>214011234N</span>
+														</li>
+														<li>
+															<span>214011234N</span>
+														</li>
+														<li>
+															<span>214011234N</span>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</span>
+									</div>
+								</td>
+								<td>
+									<div>
+										<p>SHANGHA WUXIN TRADE C</p>
+									</div>
+								</td>
+								<td>
+									<div>
+										<span class="c_code_ico">컬러코드</span>
+										<p>94841</p>
+									</div>
+								</td>
+								<td>
+									<div>
+										<p>SHANGHA WUXIN TRADE C</p>
+									</div>
+								</td>
+								<td>
+									<div>
+										<p>고객 하차도</p>
+									</div>
+								</td>
+								<td>
+									<div>
+										<p>2021-05-21</p>
+									</div>
+								</td>
+								<td>
+									<div>
+										<p>2021-05-21</p>
+									</div>
+								</td>
+								<td>
+									<div>
+										<a href="javascript:void(0)" class="btn btn_list">주문 접수</a>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+<!-- 코드 삽입 -->
+<pre class="language-html"><code>&lt;!-- 기본 리스트 테이블 -->
+&lt;div class="tbl_list">
+	&lt;table>
+		&lt;caption>list&lt;/caption>
+		&lt;colgroup>
+			&lt;col style="width:15%" />
+			&lt;col style="width:15%" />
+			&lt;col style="width:13%" />
+			&lt;col style="width:9%" />
+			&lt;col style="width:12%" />
+			&lt;col style="width:8%" />
+			&lt;col style="width:8%" />
+			&lt;col style="width:8%" />
+			&lt;col style="width:12%" />
+		&lt;/colgroup>
+		&lt;thead>
+			&lt;tr>
+				&lt;th scope="col">주문 요청 번호&lt;/th>
+				&lt;th scope="col">제품명(제품코드)/수량&lt;/th>
+				&lt;th scope="col">고객명&lt;/th>
+				&lt;th scope="col">컬러코드&lt;/th>
+				&lt;th scope="col">인도처&lt;/th>
+				&lt;th scope="col">인도 조건&lt;/th>
+				&lt;th scope="col">주문 요청일&lt;/th>
+				&lt;th scope="col">도착 요청일&lt;/th>
+				&lt;th scope="col">주문 상태&lt;/th>
+			&lt;/tr>
+		&lt;/thead>
+		&lt;tbody>
+			&lt;tr>
+				&lt;td>
+					&lt;div>
+						&lt;p>OR-210607-00002&lt;/p>
+						&lt;span class="od_tb_label">조정 주문&lt;/span> &lt;!-- 반품 주문일경우 bule 클래스 추가 -->
+					&lt;/div>
+				&lt;/td>
+				&lt;td>
+					&lt;div>
+						&lt;p class="c_pink">A312B-94841-G / 3,000kg&lt;/p>
+						&lt;span class="count_tag tooltip hover">+99
+							&lt;div class="tooltip_pop top info_more">
+								&lt;div class="cont mCustomScrollbar">
+									&lt;ul>
+										&lt;li class="on">
+											&lt;span>214011234N&lt;/span>
+										&lt;/li>
+										&lt;li>
+											&lt;span>214011234N&lt;/span>
+										&lt;/li>
+										&lt;li>
+											&lt;span>214011234N&lt;/span>
+										&lt;/li>
+										&lt;li>
+											&lt;span>214011234N&lt;/span>
+										&lt;/li>
+										&lt;li>
+											&lt;span>214011234N&lt;/span>
+										&lt;/li>
+										&lt;li>
+											&lt;span>214011234N&lt;/span>
+										&lt;/li>
+									&lt;/ul>
+								&lt;/div>
+							&lt;/div>
+						&lt;/span>
+					&lt;/div>
+				&lt;/td>
+				&lt;td>
+					&lt;div>
+						&lt;p>SHANGHA WUXIN TRADE C&lt;/p>
+					&lt;/div>
+				&lt;/td>
+				&lt;td>
+					&lt;div>
+						&lt;span class="c_code_ico">컬러코드&lt;/span>
+						&lt;p>94841&lt;/p>
+						&lt;span class="count_tag tooltip hover">+99
+							&lt;div class="tooltip_pop top info_more">
+								&lt;div class="cont mCustomScrollbar">
+									&lt;ul>
+										&lt;li class="on">
+											&lt;span>214011234N&lt;/span>
+										&lt;/li>
+										&lt;li>
+											&lt;span>214011234N&lt;/span>
+										&lt;/li>
+										&lt;li>
+											&lt;span>214011234N&lt;/span>
+										&lt;/li>
+										&lt;li>
+											&lt;span>214011234N&lt;/span>
+										&lt;/li>
+										&lt;li>
+											&lt;span>214011234N&lt;/span>
+										&lt;/li>
+										&lt;li>
+											&lt;span>214011234N&lt;/span>
+										&lt;/li>
+									&lt;/ul>
+								&lt;/div>
+							&lt;/div>
+						&lt;/span>
+					&lt;/div>
+				&lt;/td>
+				&lt;td>
+					&lt;div>
+						&lt;p>SHANGHA WUXIN TRADE C&lt;/p>
+					&lt;/div>
+				&lt;/td>
+				&lt;td>
+					&lt;div>
+						&lt;p>고객 하차도&lt;/p>
+					&lt;/div>
+				&lt;/td>
+				&lt;td>
+					&lt;div>
+						&lt;p>2021-05-21&lt;/p>
+					&lt;/div>
+				&lt;/td>
+				&lt;td>
+					&lt;div>
+						&lt;p>2021-05-21&lt;/p>
+					&lt;/div>
+				&lt;/td>
+				&lt;td>
+					&lt;div>
+						&lt;a href="javascript:void(0)" class="btn btn_list">주문 접수&lt;/a>
+					&lt;/div>
+				&lt;/td>
+			&lt;/tr>
+		&lt;/tbody>
+	&lt;/table>
+&lt;/div>
+</code></pre>
+<!-- 코드 삽입 -->
+
+
+			<h2 class="title mt30">합계 리스트</h2>
+			<div style="padding:30px;background-color:#E9ECF2;">
+				<div class="t_head_info">
+					<div><span class="ico_clock"></span>조회 기준 : 2021-12-12</div>
+					<div>(표시단위 : kg)</div>
+				</div>
+				<div class="tbl_list type2">
+					<div class="t_head">
+						<table>
+							<caption>list</caption>
+							<colgroup>
+								<col style="width:13%" />
+								<col style="width:47%" />
+								<col style="width:10%" />
+								<col style="width:10%" />
+								<col style="width:10%" />
+								<col style="width:10%" />
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">제품 코드</th>
+									<th scope="col" colspan="2">공장명</th>
+									<th scope="col" class="txt_r">정품재고</th>
+									<th scope="col" class="txt_r">출하가능재고</th>
+									<th scope="col" class="txt_r">예약재고</th>
+								</tr>
+							</thead>
+						</table>
+					</div>
+					<div class="t_body mCustomScrollbar">
+						<table>
+							<colgroup>
+								<col style="width:13%" />
+								<col style="width:47%" />
+								<col style="width:10%" />
+								<col style="width:10%" />
+								<col style="width:10%" />
+								<col style="width:10%" />
+							</colgroup>
+							<tbody>
+								<tr>
+									<td>
+										<div>
+											<p>A380G-07869-F5</p>
+										</div>
+									</td>
+									<td colspan="2">
+										<div>
+											<p>LGC 익산(EP) ABS</p>
+										</div>
+									</td>
+									<td class="txt_r">
+										<div>
+											<p>0</p>
+										</div>
+									</td>
+									<td class="txt_r">
+										<div>
+											<p>0</p>
+										</div>
+									</td>
+									<td class="txt_r">
+										<div>
+											<p>0</p>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div>
+											<p>A380G-07869-F5</p>
+										</div>
+									</td>
+									<td colspan="2">
+										<div>
+											<p>LGC 익산(EP) ABS</p>
+										</div>
+									</td>
+									<td class="txt_r">
+										<div>
+											<p>0</p>
+										</div>
+									</td>
+									<td class="txt_r">
+										<div>
+											<p>0</p>
+										</div>
+									</td>
+									<td class="txt_r">
+										<div>
+											<p>0</p>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div>
+											<p>A380G-07869-F5</p>
+										</div>
+									</td>
+									<td colspan="2">
+										<div>
+											<p>LGC 익산(EP) ABS</p>
+										</div>
+									</td>
+									<td class="txt_r">
+										<div>
+											<p>32,400</p>
+										</div>
+									</td>
+									<td class="txt_r">
+										<div>
+											<p>22,800</p>
+										</div>
+									</td>
+									<td class="txt_r">
+										<div>
+											<p>9,600</p>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div>
+											<p>A380G-07869-F5</p>
+										</div>
+									</td>
+									<td colspan="2">
+										<div>
+											<p>LGC 익산(EP) ABS</p>
+										</div>
+									</td>
+									<td class="txt_r">
+										<div>
+											<p>0</p>
+										</div>
+									</td>
+									<td class="txt_r">
+										<div>
+											<p>0</p>
+										</div>
+									</td>
+									<td class="txt_r">
+										<div>
+											<p>0</p>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div>
+											<p>A380G-07869-F5</p>
+										</div>
+									</td>
+									<td colspan="2">
+										<div>
+											<p>LGC 익산(EP) ABS</p>
+										</div>
+									</td>
+									<td class="txt_r">
+										<div>
+											<p>0</p>
+										</div>
+									</td>
+									<td class="txt_r">
+										<div>
+											<p>0</p>
+										</div>
+									</td>
+									<td class="txt_r">
+										<div>
+											<p>0</p>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div>
+											<p>A380G-07869-F5</p>
+										</div>
+									</td>
+									<td colspan="2">
+										<div>
+											<p>LGC 익산(EP) ABS</p>
+										</div>
+									</td>
+									<td class="txt_r">
+										<div>
+											<p>0</p>
+										</div>
+									</td>
+									<td class="txt_r">
+										<div>
+											<p>0</p>
+										</div>
+									</td>
+									<td class="txt_r">
+										<div>
+											<p>0</p>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div>
+											<p>A380G-07869-F5</p>
+										</div>
+									</td>
+									<td colspan="2">
+										<div>
+											<p>LGC 익산(EP) ABS</p>
+										</div>
+									</td>
+									<td class="txt_r">
+										<div>
+											<p>0</p>
+										</div>
+									</td>
+									<td class="txt_r">
+										<div>
+											<p>0</p>
+										</div>
+									</td>
+									<td class="txt_r">
+										<div>
+											<p>0</p>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div>
+											<p>A380G-07869-F5</p>
+										</div>
+									</td>
+									<td colspan="2">
+										<div>
+											<p>LGC 익산(EP) ABS</p>
+										</div>
+									</td>
+									<td class="txt_r">
+										<div>
+											<p>0</p>
+										</div>
+									</td>
+									<td class="txt_r">
+										<div>
+											<p>0</p>
+										</div>
+									</td>
+									<td class="txt_r">
+										<div>
+											<p>0</p>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="t_foot">
+						<p>※ 전산 처리 과정으로 실제 재고 상황과 다를 수 있습니다.</p>
+						<div>
+							<table>
+								<colgroup>
+									<col style="width:13%" />
+									<col style="width:47%" />
+									<col style="width:8%" />
+									<col style="width:10%" />
+									<col style="width:10%" />
+									<col style="width:10%" />
+								</colgroup>
+								<thead>
+									<tr>
+										<th colspan="2" class="txt_r"></th>
+										<th></th>
+										<th class="txt_r">정품재고</th>
+										<th class="txt_r">출하가능재고</th>
+										<th class="txt_r">예약재고</th>
+									</tr>
+								</thead>
+								<tfoot>
+									<tr>
+										<td colspan="2"></td>
+										<td class="txt_r">총합</td>
+										<td class="txt_r">32,400</td>
+										<td class="txt_r">22,800</td>
+										<td class="txt_r">9,600</td>
+									</tr>
+								</tfoot>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="conIn_tip"></div>
+<!-- 코드 삽입 -->
+<pre class="language-html"><code>&lt;!-- 합계가 있는 리스트 -->
+&lt;div class="t_head_info"> &lt;!-- 테이블 상단 정보 있을 시 -->
+	&lt;div>&lt;span class="ico_clock">&lt;/span>조회 기준 : 2021-12-12&lt;/div>
+	&lt;div>(표시단위 : kg)&lt;/div>
+&lt;/div>
+&lt;div class="tbl_list type2"> &lt;!-- type2 클래스 추가 -->
+	&lt;div class="t_head"> &lt;!-- thead -> t_head로 분리 -->
+		&lt;table>
+			&lt;caption>list&lt;/caption>
+			&lt;colgroup>
+				&lt;col style="width:13%" />
+				&lt;col style="width:47%" />
+				&lt;col style="width:10%" />
+				&lt;col style="width:10%" />
+				&lt;col style="width:10%" />
+				&lt;col style="width:10%" />
+			&lt;/colgroup>
+			&lt;thead>
+				&lt;tr>
+					&lt;th scope="col">제품 코드&lt;/th>
+					&lt;th scope="col" colspan="2">공장명&lt;/th>
+					&lt;th scope="col" class="txt_r">정품재고&lt;/th>
+					&lt;th scope="col" class="txt_r">출하가능재고&lt;/th>
+					&lt;th scope="col" class="txt_r">예약재고&lt;/th>
+				&lt;/tr>
+			&lt;/thead>
+		&lt;/table>
+	&lt;/div>
+	&lt;div class="t_body mCustomScrollbar"> &lt;!-- tbody -> t_body로 분리 및 스크롤 lib 클래스 추가 -->
+		&lt;table>
+			&lt;colgroup>
+				&lt;col style="width:13%" />
+				&lt;col style="width:47%" />
+				&lt;col style="width:10%" />
+				&lt;col style="width:10%" />
+				&lt;col style="width:10%" />
+				&lt;col style="width:10%" />
+			&lt;/colgroup>
+			&lt;tbody>
+				&lt;tr>
+					&lt;td>
+						&lt;div>
+							&lt;p>A380G-07869-F5&lt;/p>
+						&lt;/div>
+					&lt;/td>
+					&lt;td colspan="2">
+						&lt;div>
+							&lt;p>LGC 익산(EP) ABS&lt;/p>
+						&lt;/div>
+					&lt;/td>
+					&lt;td class="txt_r">
+						&lt;div>
+							&lt;p>32,400&lt;/p>
+						&lt;/div>
+					&lt;/td>
+					&lt;td class="txt_r">
+						&lt;div>
+							&lt;p>22,800&lt;/p>
+						&lt;/div>
+					&lt;/td>
+					&lt;td class="txt_r">
+						&lt;div>
+							&lt;p>9,600&lt;/p>
+						&lt;/div>
+					&lt;/td>
+				&lt;/tr>
+			&lt;/tbody>
+		&lt;/table>
+	&lt;/div>
+	&lt;div class="t_foot"> &lt;!-- tfoot -> t_foot로 분리 -->
+		&lt;p>※ 전산 처리 과정으로 실제 재고 상황과 다를 수 있습니다.&lt;/p>
+		&lt;div>
+			&lt;table>
+				&lt;colgroup>
+					&lt;col style="width:13%" />
+					&lt;col style="width:47%" />
+					&lt;col style="width:8%" />
+					&lt;col style="width:10%" />
+					&lt;col style="width:10%" />
+					&lt;col style="width:10%" />
+				&lt;/colgroup>
+				&lt;thead>
+					&lt;tr>
+						&lt;th colspan="2" class="txt_r">&lt;/th>
+						&lt;th>&lt;/th>
+						&lt;th class="txt_r">정품재고&lt;/th>
+						&lt;th class="txt_r">출하가능재고&lt;/th>
+						&lt;th class="txt_r">예약재고&lt;/th>
+					&lt;/tr>
+				&lt;/thead>
+				&lt;tfoot>
+					&lt;tr>
+						&lt;td colspan="2">&lt;/td>
+						&lt;td class="txt_r">총합&lt;/td>
+						&lt;td class="txt_r">32,400&lt;/td>
+						&lt;td class="txt_r">22,800&lt;/td>
+						&lt;td class="txt_r">9,600&lt;/td>
+					&lt;/tr>
+				&lt;/tfoot>
+			&lt;/table>
+		&lt;/div>
+	&lt;/div>
+&lt;/div>
+</code></pre>
+<!-- 코드 삽입 -->
+
+
+			<h2 class="title mt30">합계없는 리스트</h2>
+			<div style="padding:30px;background-color:#E9ECF2;">
+				<div class="tbl_list type2 pb0">
+					<div class="t_head">
+						<table>
+							<caption>list</caption>
+							<colgroup>
+								<col style="width:13%" />
+								<col style="width:47%" />
+								<col style="width:10%" />
+								<col style="width:10%" />
+								<col style="width:10%" />
+								<col style="width:10%" />
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">제품 코드</th>
+									<th scope="col" colspan="2">공장명</th>
+									<th scope="col" class="txt_r">정품재고</th>
+									<th scope="col" class="txt_r">출하가능재고</th>
+									<th scope="col" class="txt_r">예약재고</th>
+								</tr>
+							</thead>
+						</table>
+					</div>
+					<div class="t_body mCustomScrollbar">
+						<table>
+							<colgroup>
+								<col style="width:13%" />
+								<col style="width:47%" />
+								<col style="width:10%" />
+								<col style="width:10%" />
+								<col style="width:10%" />
+								<col style="width:10%" />
+							</colgroup>
+							<tbody>
+								<tr>
+									<td>
+										<div>
+											<p>A380G-07869-F5</p>
+										</div>
+									</td>
+									<td colspan="2">
+										<div>
+											<p>LGC 익산(EP) ABS</p>
+										</div>
+									</td>
+									<td class="txt_r">
+										<div>
+											<p>0</p>
+										</div>
+									</td>
+									<td class="txt_r">
+										<div>
+											<p>0</p>
+										</div>
+									</td>
+									<td class="txt_r">
+										<div>
+											<p>0</p>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div>
+											<p>A380G-07869-F5</p>
+										</div>
+									</td>
+									<td colspan="2">
+										<div>
+											<p>LGC 익산(EP) ABS</p>
+										</div>
+									</td>
+									<td class="txt_r">
+										<div>
+											<p>0</p>
+										</div>
+									</td>
+									<td class="txt_r">
+										<div>
+											<p>0</p>
+										</div>
+									</td>
+									<td class="txt_r">
+										<div>
+											<p>0</p>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div>
+											<p>A380G-07869-F5</p>
+										</div>
+									</td>
+									<td colspan="2">
+										<div>
+											<p>LGC 익산(EP) ABS</p>
+										</div>
+									</td>
+									<td class="txt_r">
+										<div>
+											<p>32,400</p>
+										</div>
+									</td>
+									<td class="txt_r">
+										<div>
+											<p>22,800</p>
+										</div>
+									</td>
+									<td class="txt_r">
+										<div>
+											<p>9,600</p>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div>
+											<p>A380G-07869-F5</p>
+										</div>
+									</td>
+									<td colspan="2">
+										<div>
+											<p>LGC 익산(EP) ABS</p>
+										</div>
+									</td>
+									<td class="txt_r">
+										<div>
+											<p>0</p>
+										</div>
+									</td>
+									<td class="txt_r">
+										<div>
+											<p>0</p>
+										</div>
+									</td>
+									<td class="txt_r">
+										<div>
+											<p>0</p>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div>
+											<p>A380G-07869-F5</p>
+										</div>
+									</td>
+									<td colspan="2">
+										<div>
+											<p>LGC 익산(EP) ABS</p>
+										</div>
+									</td>
+									<td class="txt_r">
+										<div>
+											<p>0</p>
+										</div>
+									</td>
+									<td class="txt_r">
+										<div>
+											<p>0</p>
+										</div>
+									</td>
+									<td class="txt_r">
+										<div>
+											<p>0</p>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div>
+											<p>A380G-07869-F5</p>
+										</div>
+									</td>
+									<td colspan="2">
+										<div>
+											<p>LGC 익산(EP) ABS</p>
+										</div>
+									</td>
+									<td class="txt_r">
+										<div>
+											<p>0</p>
+										</div>
+									</td>
+									<td class="txt_r">
+										<div>
+											<p>0</p>
+										</div>
+									</td>
+									<td class="txt_r">
+										<div>
+											<p>0</p>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div>
+											<p>A380G-07869-F5</p>
+										</div>
+									</td>
+									<td colspan="2">
+										<div>
+											<p>LGC 익산(EP) ABS</p>
+										</div>
+									</td>
+									<td class="txt_r">
+										<div>
+											<p>0</p>
+										</div>
+									</td>
+									<td class="txt_r">
+										<div>
+											<p>0</p>
+										</div>
+									</td>
+									<td class="txt_r">
+										<div>
+											<p>0</p>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div>
+											<p>A380G-07869-F5</p>
+										</div>
+									</td>
+									<td colspan="2">
+										<div>
+											<p>LGC 익산(EP) ABS</p>
+										</div>
+									</td>
+									<td class="txt_r">
+										<div>
+											<p>0</p>
+										</div>
+									</td>
+									<td class="txt_r">
+										<div>
+											<p>0</p>
+										</div>
+									</td>
+									<td class="txt_r">
+										<div>
+											<p>0</p>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="conIn_tip"></div>
+<!-- 코드 삽입 -->
+<pre class="language-html"><code>&lt;!-- 합계없는 리스트 -->
+&lt;div class="tbl_list type2 pb0"> &lt;!-- pb0 클래스 추가 -->
+	&lt;div class="t_head">
+		&lt;table>
+			&lt;caption>list&lt;/caption>
+			&lt;colgroup>
+				&lt;col style="width:13%" />
+				&lt;col style="width:47%" />
+				&lt;col style="width:10%" />
+				&lt;col style="width:10%" />
+				&lt;col style="width:10%" />
+				&lt;col style="width:10%" />
+			&lt;/colgroup>
+			&lt;thead>
+				&lt;tr>
+					&lt;th scope="col">제품 코드&lt;/th>
+					&lt;th scope="col" colspan="2">공장명&lt;/th>
+					&lt;th scope="col" class="txt_r">정품재고&lt;/th>
+					&lt;th scope="col" class="txt_r">출하가능재고&lt;/th>
+					&lt;th scope="col" class="txt_r">예약재고&lt;/th>
+				&lt;/tr>
+			&lt;/thead>
+		&lt;/table>
+	&lt;/div>
+	&lt;div class="t_body mCustomScrollbar">
+		&lt;table>
+			&lt;colgroup>
+				&lt;col style="width:13%" />
+				&lt;col style="width:47%" />
+				&lt;col style="width:10%" />
+				&lt;col style="width:10%" />
+				&lt;col style="width:10%" />
+				&lt;col style="width:10%" />
+			&lt;/colgroup>
+			&lt;tbody>
+				&lt;tr>
+					&lt;td>
+						&lt;div>
+							&lt;p>A380G-07869-F5&lt;/p>
+						&lt;/div>
+					&lt;/td>
+					&lt;td colspan="2">
+						&lt;div>
+							&lt;p>LGC 익산(EP) ABS&lt;/p>
+						&lt;/div>
+					&lt;/td>
+					&lt;td class="txt_r">
+						&lt;div>
+							&lt;p>32,400&lt;/p>
+						&lt;/div>
+					&lt;/td>
+					&lt;td class="txt_r">
+						&lt;div>
+							&lt;p>22,800&lt;/p>
+						&lt;/div>
+					&lt;/td>
+					&lt;td class="txt_r">
+						&lt;div>
+							&lt;p>9,600&lt;/p>
+						&lt;/div>
+					&lt;/td>
+				&lt;/tr>
+			&lt;/tbody>
+		&lt;/table>
+	&lt;/div>
+&lt;/div>
+</code></pre>
+<!-- 코드 삽입 -->
+
+
+			<h2 class="title mt30">합계없는 리스트 (min-height: 56px)</h2>
+			<div style="padding:30px;background-color:#E9ECF2;">
+				<div class="tbl_list type2 t_h56 pb0">
+					<div class="t_head">
+						<table>
+							<caption>list</caption>
+							<colgroup>
+								<col style="width:13%" />
+								<col style="width:47%" />
+								<col style="width:10%" />
+								<col style="width:10%" />
+								<col style="width:10%" />
+								<col style="width:10%" />
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">제품 코드</th>
+									<th scope="col" colspan="2">공장명</th>
+									<th scope="col" class="txt_r">정품재고</th>
+									<th scope="col" class="txt_r">출하가능재고</th>
+									<th scope="col" class="txt_r">예약재고</th>
+								</tr>
+							</thead>
+						</table>
+					</div>
+					<div class="t_body mCustomScrollbar">
+						<table>
+							<colgroup>
+								<col style="width:13%" />
+								<col style="width:47%" />
+								<col style="width:10%" />
+								<col style="width:10%" />
+								<col style="width:10%" />
+								<col style="width:10%" />
+							</colgroup>
+							<tbody>
+								<tr>
+									<td>
+										<div>
+											<p>A380G-07869-F5</p>
+										</div>
+									</td>
+									<td colspan="2">
+										<div>
+											<p>LGC 익산(EP) ABS</p>
+										</div>
+									</td>
+									<td class="txt_r">
+										<div>
+											<p>0</p>
+										</div>
+									</td>
+									<td class="txt_r">
+										<div>
+											<p>0</p>
+										</div>
+									</td>
+									<td class="txt_r">
+										<div>
+											<p>0</p>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div>
+											<p>A380G-07869-F5</p>
+										</div>
+									</td>
+									<td colspan="2">
+										<div>
+											<p>LGC 익산(EP) ABS</p>
+										</div>
+									</td>
+									<td class="txt_r">
+										<div>
+											<p>0</p>
+										</div>
+									</td>
+									<td class="txt_r">
+										<div>
+											<p>0</p>
+										</div>
+									</td>
+									<td class="txt_r">
+										<div>
+											<p>0</p>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div>
+											<p>A380G-07869-F5</p>
+										</div>
+									</td>
+									<td colspan="2">
+										<div>
+											<p>LGC 익산(EP) ABS</p>
+										</div>
+									</td>
+									<td class="txt_r">
+										<div>
+											<p>32,400</p>
+										</div>
+									</td>
+									<td class="txt_r">
+										<div>
+											<p>22,800</p>
+										</div>
+									</td>
+									<td class="txt_r">
+										<div>
+											<p>9,600</p>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div>
+											<p>A380G-07869-F5</p>
+										</div>
+									</td>
+									<td colspan="2">
+										<div>
+											<p>LGC 익산(EP) ABS</p>
+										</div>
+									</td>
+									<td class="txt_r">
+										<div>
+											<p>0</p>
+										</div>
+									</td>
+									<td class="txt_r">
+										<div>
+											<p>0</p>
+										</div>
+									</td>
+									<td class="txt_r">
+										<div>
+											<p>0</p>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div>
+											<p>A380G-07869-F5</p>
+										</div>
+									</td>
+									<td colspan="2">
+										<div>
+											<p>LGC 익산(EP) ABS</p>
+										</div>
+									</td>
+									<td class="txt_r">
+										<div>
+											<p>0</p>
+										</div>
+									</td>
+									<td class="txt_r">
+										<div>
+											<p>0</p>
+										</div>
+									</td>
+									<td class="txt_r">
+										<div>
+											<p>0</p>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div>
+											<p>A380G-07869-F5</p>
+										</div>
+									</td>
+									<td colspan="2">
+										<div>
+											<p>LGC 익산(EP) ABS</p>
+										</div>
+									</td>
+									<td class="txt_r">
+										<div>
+											<p>0</p>
+										</div>
+									</td>
+									<td class="txt_r">
+										<div>
+											<p>0</p>
+										</div>
+									</td>
+									<td class="txt_r">
+										<div>
+											<p>0</p>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div>
+											<p>A380G-07869-F5</p>
+										</div>
+									</td>
+									<td colspan="2">
+										<div>
+											<p>LGC 익산(EP) ABS</p>
+										</div>
+									</td>
+									<td class="txt_r">
+										<div>
+											<p>0</p>
+										</div>
+									</td>
+									<td class="txt_r">
+										<div>
+											<p>0</p>
+										</div>
+									</td>
+									<td class="txt_r">
+										<div>
+											<p>0</p>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div>
+											<p>A380G-07869-F5</p>
+										</div>
+									</td>
+									<td colspan="2">
+										<div>
+											<p>LGC 익산(EP) ABS</p>
+										</div>
+									</td>
+									<td class="txt_r">
+										<div>
+											<p>0</p>
+										</div>
+									</td>
+									<td class="txt_r">
+										<div>
+											<p>0</p>
+										</div>
+									</td>
+									<td class="txt_r">
+										<div>
+											<p>0</p>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="conIn_tip"></div>
+<!-- 코드 삽입 -->
+<pre class="language-html"><code>&lt;!-- height가 56일 경우 -->
+&lt;div class="tbl_list type2 t_h56 pb0"> &lt;!-- t_h56 클래스 추가 -->
+	&lt;div class="t_head">
+		&lt;table>
+			&lt;caption>list&lt;/caption>
+			&lt;colgroup>
+				&lt;col style="width:13%" />
+				&lt;col style="width:47%" />
+				&lt;col style="width:10%" />
+				&lt;col style="width:10%" />
+				&lt;col style="width:10%" />
+				&lt;col style="width:10%" />
+			&lt;/colgroup>
+			&lt;thead>
+				&lt;tr>
+					&lt;th scope="col">제품 코드&lt;/th>
+					&lt;th scope="col" colspan="2">공장명&lt;/th>
+					&lt;th scope="col" class="txt_r">정품재고&lt;/th>
+					&lt;th scope="col" class="txt_r">출하가능재고&lt;/th>
+					&lt;th scope="col" class="txt_r">예약재고&lt;/th>
+				&lt;/tr>
+			&lt;/thead>
+		&lt;/table>
+	&lt;/div>
+	&lt;div class="t_body mCustomScrollbar">
+		&lt;table>
+			&lt;colgroup>
+				&lt;col style="width:13%" />
+				&lt;col style="width:47%" />
+				&lt;col style="width:10%" />
+				&lt;col style="width:10%" />
+				&lt;col style="width:10%" />
+				&lt;col style="width:10%" />
+			&lt;/colgroup>
+			&lt;tbody>
+				&lt;tr>
+					&lt;td>
+						&lt;div>
+							&lt;p>A380G-07869-F5&lt;/p>
+						&lt;/div>
+					&lt;/td>
+					&lt;td colspan="2">
+						&lt;div>
+							&lt;p>LGC 익산(EP) ABS&lt;/p>
+						&lt;/div>
+					&lt;/td>
+					&lt;td class="txt_r">
+						&lt;div>
+							&lt;p>32,400&lt;/p>
+						&lt;/div>
+					&lt;/td>
+					&lt;td class="txt_r">
+						&lt;div>
+							&lt;p>22,800&lt;/p>
+						&lt;/div>
+					&lt;/td>
+					&lt;td class="txt_r">
+						&lt;div>
+							&lt;p>9,600&lt;/p>
+						&lt;/div>
+					&lt;/td>
+				&lt;/tr>
+			&lt;/tbody>
+		&lt;/table>
+	&lt;/div>
+&lt;/div>
+</code></pre>
+<!-- 코드 삽입 -->
+
+
+			<h2 class="title mt30">특이케이스 리스트</h2>
+			<div style="padding:30px;background-color:#E9ECF2;">
+				<div class="tbl_list type2 etc pb0">
+					<div class="t_head">
+						<table>
+							<caption>list</caption>
+							<colgroup>
+								<col style="width:8%" />
+								<col style="width:10%" />
+								<col style="width:8%" />
+								<col style="width:8%" />
+								<col style="width:8%" />
+								<col style="width:8%" />
+								<col style="width:8%" />
+								<col style="width:11%" />
+								<col style="width:11%" />
+								<col style="width:20%" />
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col" class="txt_c">주문 제품 번호</th>
+									<th scope="col">제품 코드</th>
+									<th scope="col">컬러 코드</th>
+									<th scope="col">주문 수량</th>
+									<th scope="col">취소 수량</th>
+									<th scope="col">단위당 가격</th>
+									<th scope="col">총 주문액</th>
+									<th scope="col">Commission Agent</th>
+									<th scope="col">인도처</th>
+									<th scope="col">인도처 주소</th>
+								</tr>
+							</thead>
+						</table>
+					</div>
+					<div class="t_body mCustomScrollbar">
+						<table>
+							<colgroup>
+								<col style="width:8%" />
+								<col style="width:10%" />
+								<col style="width:8%" />
+								<col style="width:8%" />
+								<col style="width:8%" />
+								<col style="width:8%" />
+								<col style="width:8%" />
+								<col style="width:11%" />
+								<col style="width:11%" />
+								<col style="width:20%" />
+							</colgroup>
+							<tbody>
+								<tr>
+									<td class="txt_c">
+										<div>
+											<p>10</p>
+										</div>
+									</td>
+									<td>
+										<div>
+											<p>A312B-94841-G</p>
+										</div>
+									</td>
+									<td>
+										<div>
+											<span class="c_code_ico">컬러코드</span>
+											<p>948416</p>
+										</div>
+									</td>
+									<td>
+										<div>
+											<p class="c_pink">30,000 kg</p>
+										</div>
+									</td>
+									<td>
+										<div>
+											<p>-</p>
+										</div>
+									</td>
+									<td>
+										<div>
+											<p>KRW 1,200 / MT</p>
+										</div>
+									</td>
+									<td>
+										<div>
+											<p>KRW 3,600,000</p>
+										</div>
+									</td>
+									<td>
+										<div>
+											<p>SHANGHA WUXIN
+												TRADE CO.LTD</p>
+										</div>
+									</td>
+									<td>
+										<div>
+											<p>SHANGHA WUXIN
+												TRADE CO.LTD</p>
+										</div>
+									</td>
+									<td>
+										<div>
+											<p>China. Shanghai, Qinqpu District, Qinghu Rd. 1023 Build. 510-109 1023 安路东山工业区60栋104号</p>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="txt_c">
+										<div>
+											<p>20</p>
+										</div>
+									</td>
+									<td>
+										<div>
+											<p>A312B-94841-G</p>
+										</div>
+									</td>
+									<td>
+										<div>
+											<span class="c_code_ico">컬러코드</span>
+											<p>948416</p>
+										</div>
+									</td>
+									<td>
+										<div>
+											<p class="c_pink">30,000 kg</p>
+										</div>
+									</td>
+									<td>
+										<div>
+											<p>30,000 kg</p>
+										</div>
+									</td>
+									<td colspan="5">
+										<div>
+											<p class="c_pink">해당 제품 주문이 취소되었습니다.</p>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="txt_c">
+										<div>
+											<p>30</p>
+										</div>
+									</td>
+									<td>
+										<div>
+											<p>A312B-94841-G</p>
+										</div>
+									</td>
+									<td>
+										<div>
+											<span class="c_code_ico">컬러코드</span>
+											<p>948416</p>
+										</div>
+									</td>
+									<td>
+										<div>
+											<p class="c_pink">30,000 kg</p>
+										</div>
+									</td>
+									<td>
+										<div>
+											<p>-</p>
+										</div>
+									</td>
+									<td>
+										<div>
+											<p>KRW 1,200 / MT</p>
+										</div>
+									</td>
+									<td>
+										<div>
+											<p>KRW 3,600,000</p>
+										</div>
+									</td>
+									<td>
+										<div>
+											<p>SHANGHA WUXIN
+												TRADE CO.LTD</p>
+										</div>
+									</td>
+									<td>
+										<div>
+											<p>SHANGHA WUXIN
+												TRADE CO.LTD</p>
+										</div>
+									</td>
+									<td>
+										<div>
+											<p>China. Shanghai, Qinqpu District, Qinghu Rd. 1023 Build. 510-109 1023 安路东山工业区60栋104号</p>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="txt_c">
+										<div>
+											<p>40</p>
+										</div>
+									</td>
+									<td>
+										<div>
+											<p>A312B-94841-G</p>
+										</div>
+									</td>
+									<td>
+										<div>
+											<span class="c_code_ico">컬러코드</span>
+											<p>948416</p>
+										</div>
+									</td>
+									<td>
+										<div>
+											<p class="c_pink">30,000 kg</p>
+										</div>
+									</td>
+									<td>
+										<div>
+											<p>-</p>
+										</div>
+									</td>
+									<td>
+										<div>
+											<p>KRW 1,200 / MT</p>
+										</div>
+									</td>
+									<td>
+										<div>
+											<p>KRW 3,600,000</p>
+										</div>
+									</td>
+									<td>
+										<div>
+											<p>SHANGHA WUXIN
+												TRADE CO.LTD</p>
+										</div>
+									</td>
+									<td>
+										<div>
+											<p>SHANGHA WUXIN
+												TRADE CO.LTD</p>
+										</div>
+									</td>
+									<td>
+										<div>
+											<p>China. Shanghai, Qinqpu District, Qinghu Rd. 1023 Build. 510-109 1023 安路东山工业区60栋104号</p>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="txt_c">
+										<div>
+											<p>50</p>
+										</div>
+									</td>
+									<td>
+										<div>
+											<p>A312B-94841-G</p>
+										</div>
+									</td>
+									<td>
+										<div>
+											<span class="c_code_ico">컬러코드</span>
+											<p>948416</p>
+										</div>
+									</td>
+									<td>
+										<div>
+											<p class="c_pink">30,000 kg</p>
+										</div>
+									</td>
+									<td>
+										<div>
+											<p>-</p>
+										</div>
+									</td>
+									<td>
+										<div>
+											<p>KRW 1,200 / MT</p>
+										</div>
+									</td>
+									<td>
+										<div>
+											<p>KRW 3,600,000</p>
+										</div>
+									</td>
+									<td>
+										<div>
+											<p>SHANGHA WUXIN
+												TRADE CO.LTD</p>
+										</div>
+									</td>
+									<td>
+										<div>
+											<p>SHANGHA WUXIN
+												TRADE CO.LTD</p>
+										</div>
+									</td>
+									<td>
+										<div>
+											<p>China. Shanghai, Qinqpu District, Qinghu Rd. 1023 Build. 510-109 1023 安路东山工业区60栋104号</p>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="txt_c">
+										<div>
+											<p>50</p>
+										</div>
+									</td>
+									<td>
+										<div>
+											<p>A312B-94841-G</p>
+										</div>
+									</td>
+									<td>
+										<div>
+											<span class="c_code_ico">컬러코드</span>
+											<p>948416</p>
+										</div>
+									</td>
+									<td>
+										<div>
+											<p class="c_pink">30,000 kg</p>
+										</div>
+									</td>
+									<td>
+										<div>
+											<p>-</p>
+										</div>
+									</td>
+									<td>
+										<div>
+											<p>KRW 1,200 / MT</p>
+										</div>
+									</td>
+									<td>
+										<div>
+											<p>KRW 3,600,000</p>
+										</div>
+									</td>
+									<td>
+										<div>
+											<p>SHANGHA WUXIN
+												TRADE CO.LTD</p>
+										</div>
+									</td>
+									<td>
+										<div>
+											<p>SHANGHA WUXIN
+												TRADE CO.LTD</p>
+										</div>
+									</td>
+									<td>
+										<div>
+											<p>China. Shanghai, Qinqpu District, Qinghu Rd. 1023 Build. 510-109 1023 安路东山工业区60栋104号</p>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="txt_c">
+										<div>
+											<p>50</p>
+										</div>
+									</td>
+									<td>
+										<div>
+											<p>A312B-94841-G</p>
+										</div>
+									</td>
+									<td>
+										<div>
+											<span class="c_code_ico">컬러코드</span>
+											<p>948416</p>
+										</div>
+									</td>
+									<td>
+										<div>
+											<p class="c_pink">30,000 kg</p>
+										</div>
+									</td>
+									<td>
+										<div>
+											<p>-</p>
+										</div>
+									</td>
+									<td>
+										<div>
+											<p>KRW 1,200 / MT</p>
+										</div>
+									</td>
+									<td>
+										<div>
+											<p>KRW 3,600,000</p>
+										</div>
+									</td>
+									<td>
+										<div>
+											<p>SHANGHA WUXIN
+												TRADE CO.LTD</p>
+										</div>
+									</td>
+									<td>
+										<div>
+											<p>SHANGHA WUXIN
+												TRADE CO.LTD</p>
+										</div>
+									</td>
+									<td>
+										<div>
+											<p>China. Shanghai, Qinqpu District, Qinghu Rd. 1023 Build. 510-109 1023 安路东山工业区60栋104号</p>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="txt_c">
+										<div>
+											<p>50</p>
+										</div>
+									</td>
+									<td>
+										<div>
+											<p>A312B-94841-G</p>
+										</div>
+									</td>
+									<td>
+										<div>
+											<span class="c_code_ico">컬러코드</span>
+											<p>948416</p>
+										</div>
+									</td>
+									<td>
+										<div>
+											<p class="c_pink">30,000 kg</p>
+										</div>
+									</td>
+									<td>
+										<div>
+											<p>-</p>
+										</div>
+									</td>
+									<td>
+										<div>
+											<p>KRW 1,200 / MT</p>
+										</div>
+									</td>
+									<td>
+										<div>
+											<p>KRW 3,600,000</p>
+										</div>
+									</td>
+									<td>
+										<div>
+											<p>SHANGHA WUXIN
+												TRADE CO.LTD</p>
+										</div>
+									</td>
+									<td>
+										<div>
+											<p>SHANGHA WUXIN
+												TRADE CO.LTD</p>
+										</div>
+									</td>
+									<td>
+										<div>
+											<p>China. Shanghai, Qinqpu District, Qinghu Rd. 1023 Build. 510-109 1023 安路东山工业区60栋104号</p>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="txt_c">
+										<div>
+											<p>50</p>
+										</div>
+									</td>
+									<td>
+										<div>
+											<p>A312B-94841-G</p>
+										</div>
+									</td>
+									<td>
+										<div>
+											<span class="c_code_ico">컬러코드</span>
+											<p>948416</p>
+										</div>
+									</td>
+									<td>
+										<div>
+											<p class="c_pink">30,000 kg</p>
+										</div>
+									</td>
+									<td>
+										<div>
+											<p>-</p>
+										</div>
+									</td>
+									<td>
+										<div>
+											<p>KRW 1,200 / MT</p>
+										</div>
+									</td>
+									<td>
+										<div>
+											<p>KRW 3,600,000</p>
+										</div>
+									</td>
+									<td>
+										<div>
+											<p>SHANGHA WUXIN
+												TRADE CO.LTD</p>
+										</div>
+									</td>
+									<td>
+										<div>
+											<p>SHANGHA WUXIN
+												TRADE CO.LTD</p>
+										</div>
+									</td>
+									<td>
+										<div>
+											<p>China. Shanghai, Qinqpu District, Qinghu Rd. 1023 Build. 510-109 1023 安路东山工业区60栋104号</p>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="date">업데이트 :  2021-07-20</div>
+				</div>
+			</div>
+			<div class="conIn_tip"></div>
+<!-- 코드 삽입 -->
+<pre class="language-html"><code>&lt;!-- 특이케이스 -->
+&lt;div class="tbl_list type2 etc pb0"> &lt;!-- etc 클래스 추가 -->
+	&lt;div class="t_head">
+		&lt;table>
+			&lt;caption>list&lt;/caption>
+			&lt;colgroup>
+				&lt;col style="width:8%" />
+				&lt;col style="width:10%" />
+				&lt;col style="width:8%" />
+				&lt;col style="width:8%" />
+				&lt;col style="width:8%" />
+				&lt;col style="width:8%" />
+				&lt;col style="width:8%" />
+				&lt;col style="width:11%" />
+				&lt;col style="width:11%" />
+				&lt;col style="width:20%" />
+			&lt;/colgroup>
+			&lt;thead>
+				&lt;tr>
+					&lt;th scope="col" class="txt_c">주문 제품 번호&lt;/th>
+					&lt;th scope="col">제품 코드&lt;/th>
+					&lt;th scope="col">컬러 코드&lt;/th>
+					&lt;th scope="col">주문 수량&lt;/th>
+					&lt;th scope="col">취소 수량&lt;/th>
+					&lt;th scope="col">단위당 가격&lt;/th>
+					&lt;th scope="col">총 주문액&lt;/th>
+					&lt;th scope="col">Commission Agent&lt;/th>
+					&lt;th scope="col">인도처&lt;/th>
+					&lt;th scope="col">인도처 주소&lt;/th>
+				&lt;/tr>
+			&lt;/thead>
+		&lt;/table>
+	&lt;/div>
+	&lt;div class="t_body mCustomScrollbar">
+		&lt;table>
+			&lt;colgroup>
+				&lt;col style="width:8%" />
+				&lt;col style="width:10%" />
+				&lt;col style="width:8%" />
+				&lt;col style="width:8%" />
+				&lt;col style="width:8%" />
+				&lt;col style="width:8%" />
+				&lt;col style="width:8%" />
+				&lt;col style="width:11%" />
+				&lt;col style="width:11%" />
+				&lt;col style="width:20%" />
+			&lt;/colgroup>
+			&lt;tbody>
+				&lt;tr>
+					&lt;td class="txt_c">
+						&lt;div>
+							&lt;p>10&lt;/p>
+						&lt;/div>
+					&lt;/td>
+					&lt;td>
+						&lt;div>
+							&lt;p>A312B-94841-G&lt;/p>
+						&lt;/div>
+					&lt;/td>
+					&lt;td>
+						&lt;div>
+							&lt;span class="c_code_ico">컬러코드&lt;/span>
+							&lt;p>948416&lt;/p>
+						&lt;/div>
+					&lt;/td>
+					&lt;td>
+						&lt;div>
+							&lt;p class="c_pink">30,000 kg&lt;/p>
+						&lt;/div>
+					&lt;/td>
+					&lt;td>
+						&lt;div>
+							&lt;p>-&lt;/p>
+						&lt;/div>
+					&lt;/td>
+					&lt;td>
+						&lt;div>
+							&lt;p>KRW 1,200 / MT&lt;/p>
+						&lt;/div>
+					&lt;/td>
+					&lt;td>
+						&lt;div>
+							&lt;p>KRW 3,600,000&lt;/p>
+						&lt;/div>
+					&lt;/td>
+					&lt;td>
+						&lt;div>
+							&lt;p>SHANGHA WUXIN
+								TRADE CO.LTD&lt;/p>
+						&lt;/div>
+					&lt;/td>
+					&lt;td>
+						&lt;div>
+							&lt;p>SHANGHA WUXIN
+								TRADE CO.LTD&lt;/p>
+						&lt;/div>
+					&lt;/td>
+					&lt;td>
+						&lt;div>
+							&lt;p>China. Shanghai, Qinqpu District, Qinghu Rd. 1023 Build. 510-109 1023 安路东山工业区60栋104号&lt;/p>
+						&lt;/div>
+					&lt;/td>
+				&lt;/tr>
+				&lt;tr>
+					&lt;td class="txt_c">
+						&lt;div>
+							&lt;p>20&lt;/p>
+						&lt;/div>
+					&lt;/td>
+					&lt;td>
+						&lt;div>
+							&lt;p>A312B-94841-G&lt;/p>
+						&lt;/div>
+					&lt;/td>
+					&lt;td>
+						&lt;div>
+							&lt;span class="c_code_ico">컬러코드&lt;/span>
+							&lt;p>948416&lt;/p>
+						&lt;/div>
+					&lt;/td>
+					&lt;td>
+						&lt;div>
+							&lt;p class="c_pink">30,000 kg&lt;/p>
+						&lt;/div>
+					&lt;/td>
+					&lt;td>
+						&lt;div>
+							&lt;p>30,000 kg&lt;/p>
+						&lt;/div>
+					&lt;/td>
+					&lt;td colspan="5">
+						&lt;div>
+							&lt;p class="c_pink">해당 제품 주문이 취소되었습니다.&lt;/p>
+						&lt;/div>
+					&lt;/td>
+				&lt;/tr>
+			&lt;/tbody>
+		&lt;/table>
+	&lt;/div>
+	&lt;div class="date">업데이트 :  2021-07-20&lt;/div> &lt;!-- 하단 정보 있을 경우 추가 -->
+&lt;/div>
+</code></pre>
+<!-- 코드 삽입 -->
+		</div>
+	</div>
+
+
+</div>
+</body>
+</html>

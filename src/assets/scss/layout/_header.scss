@@ -1,0 +1,163 @@
+.header {
+	position: sticky;
+	width: 100%;
+	z-index: 999;
+	top: 0;
+  left: 0;
+  right: 0;
+	background-color: $bgColor-12;
+	border-bottom: 1px solid $bdColor-1;
+	.inner-wrap {
+		max-width: 1920px;
+		margin: auto;
+		padding: 0 40px;
+	}
+}
+
+.header-wrap {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.header-logo {
+	.logo-link {
+		display: block;
+		width: 217px;
+		padding: 25px 0;
+	}
+}
+
+// nav
+.nav-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	width: calc(100% - 400px);
+	.btn-nav {
+		padding-left: 28px;
+		.link {
+			display: block;
+			font-size:14px;
+			color:#fff;
+			font-weight: 700;
+			padding: 12px 24px;
+			border-radius: 8px;
+			background-image: linear-gradient(to bottom, #f75c23, #ed7c1b 112%);
+		}
+	}
+
+	.nav-list {
+		display: flex;
+		align-items: center;
+
+		.nav-menu {
+			color: $color-1;
+
+			.link {
+				display: block;
+				padding: 20px 28px;
+			}
+		}
+	}
+}
+
+// user
+.user-menu-list {
+	display: flex;
+	align-self: center;
+	gap: 40px;
+}
+
+.user-menu {
+	font-weight: 700;
+	color: $color-1;
+
+	&.work-link {
+		position: relative;
+	}
+
+	&.font-normal {
+		font-weight: 400;
+	}
+
+	.link-box {
+		position: relative;
+		padding-right: 28px;
+		color: $color-6;
+
+		&::after {
+			position: absolute;
+			top: -1px;
+			right: 0;
+			width: 20px;
+			height: 20px;
+			background: url('/assets/images/icons/ico-work-link-arr.png') no-repeat center center;
+			background-size: 100%;
+			content: "";
+		}
+	}
+}
+
+.user-menu-tooltip {
+	position: absolute;
+	top: 50px;
+	right: 0;
+  z-index: 10;
+	width: 284px;
+	padding: 12px 36px 12px 24px;
+	// padding: 12px 36px;
+	border-radius: 40px;
+	background-color: $bgColor-7;
+	box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.08);
+
+	&::after {
+		position: absolute;
+		top: -10px;
+		right: 59px;
+		border-top: 0px solid transparent;
+		border-left: 7px solid transparent;
+		border-right: 7px solid transparent;
+		border-bottom: 10px solid $bgColor-7;
+		content:"";
+	}
+
+	.text {
+		text-align: left;
+		color: $color-5;
+    @include fontCustom(14px,700,1.43,-0.35px);
+
+    .text-block {
+      display: block;
+    }
+	}
+	.btn-close {
+		position: absolute;
+		width: 20px;
+		height: 20px;
+		padding: 20px 14px;
+		transform: translateY(-50%);
+		top: 50%;
+		right: 12px;
+		&::after, &::before {
+			content: '';
+			width: 15px;
+			height: 1px;
+			position: absolute;
+			right: 0;
+			top: 50%;
+			opacity: 0.6;
+			background: $bgColor-12;
+		}
+		&::before {
+			transform: rotate(-45deg);
+		}
+		&::after {
+			transform: rotate(45deg);
+		}
+	}
+}

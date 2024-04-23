@@ -1,0 +1,129 @@
+%modal {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+.modal-root {
+  z-index: 100;
+  @extend %modal;
+  .overlay {
+    opacity: .5;
+    background-color: #000;
+    @extend %modal;
+  }
+  .window {
+    position: fixed;
+    width: 80%;
+    left: 50%;
+    top: 50%;
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    :global(.modal-contents) {
+      display: block;
+    }
+    :global(.modal-bottom) {
+      display: block;
+    }
+  }
+  &:global(.fade-enter) {
+    .overlay,
+    .window {
+      opacity: 0;
+    }
+  }
+  &:global(.fade-enter-active) {
+    .overlay {
+      opacity: .5;
+      transition: opacity .5s;
+    }
+    .window {
+      opacity: 1;
+      transition: opacity .5s;
+      transition-delay: .5s;
+    }
+  }
+  &:global(.fade-enter-done) {
+    .overlay {
+      opacity: .5;
+    }
+    .window {
+      opacity: 1;
+    }
+  }
+  &:global(.fade-exit) {
+    .overlay {
+      opacity: .5;
+    }
+    .window {
+      opacity: 1;
+    }
+  }
+  &:global(.fade-exit-active) {
+    .overlay {
+      opacity: 0;
+      transition: opacity .5s;
+      transition-delay: .5s;
+    }
+    .window {
+      opacity: 0;
+      transition: opacity .5s;
+    }
+  }
+  &:global(.fade-exit-done) {
+    .overlay,
+    .window {
+      opacity: 0;
+    }
+  }
+  // bottom 슬라이드
+  &.is-bottom {
+    .window {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      box-sizing: border-box;
+      opacity: 1 !important;
+    }
+    &:global(.fade-enter) {
+      .window {
+        transform: translateY(120%);
+      }
+    }
+    &:global(.fade-enter-active) {
+      .window {
+        transform: translateY(0);
+        transition: transform .5s;
+      }
+    }
+    &:global(.fade-enter-done) {
+      .window {
+        transform: translateY(0);
+      }
+    }
+    &:global(.fade-exit) {
+      .window {
+        transform: translateY(0);
+      }
+    }
+    &:global(.fade-exit-active) {
+      .window {
+        transform: translateY(120%);
+        transition: transform .5s;
+      }
+    }
+    &:global(.fade-exit-done) {
+      .window {
+        transform: translateY(120%);
+      }
+    }
+  }
+  .focus-end {
+    // @include a11y-hidden();
+  }
+}

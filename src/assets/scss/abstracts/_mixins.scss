@@ -1,0 +1,61 @@
+//폰트 커스텀
+@mixin fontCustom($font-size: null, $font-weight: null, $line-height: null, $letter-spacing: null) {
+    font-size: $font-size;
+    font-weight: $font-weight;
+    line-height: $line-height;
+    letter-spacing: $letter-spacing;
+}
+
+/* flex layout */
+@mixin flex-config($display: flex, $justify: flex-start, $align: flex-start, $flow: row, $wrap: nowrap) {
+  display: $display;
+  justify-content: $justify;
+  align-items: $align;
+  flex-flow: $flow;
+  flex-wrap: $wrap;
+}
+@mixin flex-start-start($display: flex, $wrap: nowrap, $flow: row) {
+  @include flex-config($display: $display, $wrap: $wrap, $flow: $flow);
+}
+@mixin flex-start-center($display: flex, $wrap: nowrap, $flow: row) {
+  @include flex-config($align: center, $display: $display, $wrap: $wrap, $flow: $flow);
+}
+@mixin flex-start-end($display: flex, $wrap: nowrap, $flow: row) {
+  @include flex-config($align: flex-end, $display: $display, $wrap: $wrap, $flow: $flow);
+}
+@mixin flex-center-start($display: flex, $wrap: nowrap, $flow: row) {
+  @include flex-config($justify: center);
+}
+@mixin flex-center-center($display: flex, $wrap: nowrap, $flow: row) {
+  @include flex-config($justify: center, $align: center, $display: $display, $wrap: $wrap, $flow: $flow);
+}
+@mixin flex-center-end($display: flex, $wrap: nowrap, $flow: row) {
+  @include flex-config($justify: center, $align: flex-end, $display: $display, $wrap: $wrap, $flow: $flow);
+}
+@mixin flex-end-start($display: flex, $wrap: nowrap, $flow: row) {
+  @include flex-config($justify: flex-end, $display: $display, $wrap: $wrap, $flow: $flow);
+}
+@mixin flex-end-center($display: flex, $wrap: nowrap, $flow: row) {
+  @include flex-config($justify: flex-end, $align: center, $display: $display, $wrap: $wrap, $flow: $flow);
+}
+@mixin flex-end-end($display: flex, $wrap: nowrap, $flow: row) {
+  @include flex-config($justify: flex-end, $align: flex-end, $display: $display, $wrap: $wrap, $flow: $flow);
+}
+@mixin flex-between-start($display: flex, $wrap: nowrap, $flow: row) {
+  @include flex-config($justify: space-between, $display: $display, $wrap: $wrap, $flow: $flow);
+}
+@mixin flex-between-center($display: flex, $wrap: nowrap, $flow: row) {
+  @include flex-config($justify: space-between, $align: center, $display: $display, $wrap: $wrap, $flow: $flow);
+}
+@mixin flex-between-end($display: flex, $wrap: nowrap, $flow: row) {
+  @include flex-config($justify: space-between, $align: flex-end, $display: $display, $wrap: $wrap, $flow: $flow);
+}
+@mixin flex-around-start($display: flex, $wrap: nowrap, $flow: row) {
+  @include flex-config($justify: space-around, $display: $display, $wrap: $wrap, $flow: $flow);
+}
+@mixin flex-around-center($display: flex, $wrap: nowrap, $flow: row) {
+  @include flex-config($justify: space-around, $align: center, $display: $display, $wrap: $wrap, $flow: $flow);
+}
+@mixin flex-around-end($display: flex, $wrap: nowrap, $flow: row) {
+  @include flex-config($justify: space-around, $align: flex-end, $display: $display, $wrap: $wrap, $flow: $flow);
+}

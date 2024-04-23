@@ -1,0 +1,16 @@
+.grid-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px 21px;
+  margin-top: 20px;
+}
+
+.item {
+  &.two-column {
+    grid-column: span 2;
+  }
+
+  &.three-column {
+    grid-column: span 3;
+  }
+}

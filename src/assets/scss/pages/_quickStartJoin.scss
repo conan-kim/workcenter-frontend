@@ -1,0 +1,218 @@
+.quick-start-join {
+
+  .page-breadcrumb {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+
+    li {
+      display: flex;
+      align-items: center;
+
+      span {
+        display: flex;
+        height: 31px;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        color: rgba(34,34, 34, .3);
+      }
+
+      &::after {
+        content: "";
+        display: inline-block;
+        width: 5px;
+        height: 5px;
+        border-top: 2px solid rgba(34,34, 34, .3);
+        border-right: 2px solid rgba(34,34, 34, .3);
+        transform: rotate(45deg) translateY(-50%);
+        margin: 5px 20px 0;
+      }
+
+      &.on {
+        span {
+          border-radius: 8px;
+          background-image: linear-gradient(to left, #b1695c, #ddae92);
+          color: #fff;
+          font-size: 12px;
+          font-weight: bold;
+          width: 106px;
+        }
+      }
+
+      &:first-child {
+        padding-left: 0;
+      }
+
+      &:last-child {
+        &::after {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .auth-page {
+    .tab-content {
+      margin-top: 48px;
+
+      .content {
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  .button-wrap {
+    padding-top: 48px;
+  }
+
+  .links-wrap {
+    margin-top: 32px;
+
+    .link-login {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+
+      a {
+        color: #f78523;
+        display: flex;
+        align-items: center;
+        font-weight: bold;
+
+        &::after {
+          content: "";
+          display: inline-block;
+          width: 16px;
+          height: 16px;
+          margin-left: 12px;
+          background: url("/assets/images/icons/icon-login-link.png") no-repeat center center;
+        }
+      }
+    }
+
+    .btn-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+    }
+  }
+
+  .process-end-wrap {
+    .service-msg {
+      font-size: 20px;
+      line-height: 1.6;
+      margin-top: 24px;
+      text-align: center;
+
+      &.mt0 {
+        margin-top: 0;
+      }
+
+      strong {
+        font-size: 20px;
+        font-weight: bold;
+      }
+    }
+
+    .button-wrap {
+      button {
+        width: 240px;
+      }
+
+      &.type2 {
+        .button {
+          font-size: 20px;
+
+          &.b-txt {
+            font-weight: 700;
+          }
+        }
+      }
+    }
+
+    .round-bg-box {
+      margin-top: 24px;
+    }
+
+    .helper-tel {
+      margin-top: 16px;
+
+      .tel {
+        color: #f78523;
+      }
+    }
+  }
+
+  .round-line-box {
+    border: 1px solid #ddd;
+    background-color: #fff;
+    border-radius: 16px;
+    padding: 22px;
+
+    .info-msg {
+      font-size: 18px;
+      font-weight: bold;
+      line-height: 1.4;
+      text-align: center;
+    }
+
+    .info-tel {
+      color: #f78523;
+      font-size: 28px;
+      font-weight: bold;
+      line-height: 1.2;
+      margin-top: 16px;
+      text-align: center;
+    }
+  }
+
+  .round-bg-box {
+    border-radius: 8px;
+    background-color: #f7f6f7;
+    padding: 20px;
+  }
+
+  .notice-wrap {
+    margin-top: 80px;
+
+    .title {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .list-type-normal {
+      margin-top: 6px;
+
+    }
+  }
+
+  .list-type-normal {
+    li {
+      color: #666;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+  }
+
+  .list-type-bullet {
+    li {
+      color: #222;
+      font-size: 16px;
+      line-height: 1.5;
+      position: relative;
+      padding-left: 10px;
+
+      &::before {
+        content: "∙";
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        line-height: 1.3;
+      }
+    }
+  }
+}
